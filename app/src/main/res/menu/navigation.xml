@@ -5,25 +5,30 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_tag_faces_black_24dp"
+        android:title="Profile" />
 
     <item
         android:id="@+id/navigation_payment"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Payment" />
+        android:icon="@drawable/ic_attach_money_black_24dp"
+        android:title="Payments" />
 
     <item
         android:id="@+id/navigation_credit_card"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_credit_card_black_24dp"
         android:title="Credit Card" />
 
     <item
         android:id="@+id/navigation_setting"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_settings_black_24dp"
         android:title="Settings" />
 
     <item
         android:id="@+id/navigation_about"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="About" />
+
 
 </menu>
