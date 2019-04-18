@@ -37,6 +37,12 @@ public class paymentList extends AppCompatActivity {
         //this method will fetch and parse the data
         loadList();
     }
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        loadList();
+    }
 
 
 
