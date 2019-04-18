@@ -16,7 +16,7 @@ public class PaymentModel {
         this.payment_state = payment_state;
     }
 
-    public int getClient_id() {
+    public int getid() {
         return client_id;
     }
 
@@ -24,8 +24,13 @@ public class PaymentModel {
         return balance;
     }
 
-    public int getPayment_state() {
-        return payment_state;
+    public boolean getPayment_state() {
+        if(this.payment_state==1){
+
+
+            return  true;
+        }
+        else return  false;
     }
 
     public String getIssued_date() {
