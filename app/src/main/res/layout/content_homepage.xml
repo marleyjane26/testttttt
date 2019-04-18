@@ -40,7 +40,7 @@
             android:layout_marginLeft="50dp"
             android:textSize="16dp"
             android:gravity="center"
-            android:text="Temperature"
+            android:text="KW/H"
             android:textColor="#000000"
             android:alpha="0.8"/>
 
@@ -72,7 +72,7 @@
             android:layout_marginTop="15dp"
             android:alpha="0.8"
             android:gravity="center"
-            android:text="Humidity"
+            android:text="Cost Bill"
             android:textColor="#000000"
             android:textSize="16dp" />
 
