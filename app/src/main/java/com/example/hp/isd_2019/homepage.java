@@ -56,7 +56,7 @@ public class homepage extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.homepage, menu);
+        getMenuInflater().inflate(R.menu.activity_homepage_drawer, menu);
         return true;
     }
 
@@ -68,7 +68,7 @@ public class homepage extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.nav_setting) {
             return true;
         }
 
@@ -81,18 +81,28 @@ public class homepage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_payments) {
             Intent my_intent= new Intent(homepage.this,paymentList.class);
             startActivity(my_intent);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_profile) {
+            Intent my_intent= new Intent(homepage.this,ProfileActivity.class);
+            startActivity(my_intent);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_setting) {
+            Intent my_intent= new Intent(homepage.this,settingActivity.class);
+            startActivity(my_intent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_creditC) {
+            Intent my_intent= new Intent(homepage.this,creditcardActivity.class);
+            startActivity(my_intent);
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+
+        } else if (id == R.id.nav_contact) {
+            Intent my_intent= new Intent(homepage.this,contactUsActivity.class);
+            startActivity(my_intent);
 
         }
 

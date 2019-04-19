@@ -24,7 +24,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".loginPage" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".paymentList"></activity>
+        <activity android:name=".paymentList" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".settingActivity" />
+        <activity android:name=".creditcardActivity" />
+        <activity android:name=".contactUsActivity" />
+        <activity android:name=".editProfileActivity"></activity>
     </application>
 
 </manifest>
