@@ -57,7 +57,8 @@ public class paymentAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.listpymnt, null, true);
 
 
-            holder.tvcity = (TextView) convertView.findViewById(R.id.text1);
+            holder.id = (TextView) convertView.findViewById(R.id.text1);
+            holder.st = (TextView) convertView.findViewById(R.id.text2);
 
             convertView.setTag(holder);
         }else {
@@ -66,14 +67,24 @@ public class paymentAdapter extends BaseAdapter {
         }
 
 
-        holder.tvcity.setText("id : "+dataModelArrayList.get(position).getid());
+        holder.id.setText("id : "+dataModelArrayList.get(position).getid());
+       if( dataModelArrayList.get(position).getPayment_state()==true){
+
+           holder.st.setText("Payed");
+
+       }
+       else{
+
+           holder.st.setText("not Payed");
+
+       }
 
         return convertView;
     }
 
     private class ViewHolder {
 
-        protected TextView  tvcity;
+        protected TextView  id,st;
 
     }
 

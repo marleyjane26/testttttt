@@ -159,7 +159,7 @@ public class homepage extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent my_intent= new Intent(homepage.this,login.class);
+            Intent my_intent= new Intent(homepage.this,paymentList.class);
             startActivity(my_intent);
         } else if (id == R.id.nav_gallery) {
             Intent my_intent= new Intent(homepage.this,Main2Activity.class);
@@ -168,7 +168,8 @@ public class homepage extends AppCompatActivity
             Intent my_intent= new Intent(homepage.this,MainActivity.class);
             startActivity(my_intent);
         } else if (id == R.id.nav_manage) {
-
+            Intent my_intent= new Intent(homepage.this,SinglePayment.class);
+            startActivity(my_intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

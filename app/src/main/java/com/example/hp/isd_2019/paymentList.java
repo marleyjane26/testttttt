@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -40,7 +41,7 @@ public class paymentList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_payment_list);
 
         listView = findViewById(R.id.listView1);
 
@@ -50,8 +51,7 @@ public class paymentList extends AppCompatActivity {
 
     private void retrieveJSON() {
 
-      //  showSimpleProgressDialog(this, "Loading...","Fetching Json",false);
-
+        showSimpleProgressDialog(this, "Loading...","Please wait",false);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URLstring,
                 new Response.Listener<String>() {
                     @Override
@@ -62,25 +62,47 @@ public class paymentList extends AppCompatActivity {
                         try {
 
                             JSONObject obj = new JSONObject(response);
-                            if(obj.optString("status").equals("true")){
+
 
                                 dataModelArrayList = new ArrayList<>();
                                 JSONArray dataArray  = obj.getJSONArray("data");
 
                                 for (int i = 0; i < dataArray.length(); i++) {
 
-                                    PaymentModel playerModel = new PaymentModel();
+                                    PaymentModel x = new PaymentModel();
                                     JSONObject dataobj = dataArray.getJSONObject(i);
+                                    Log.d("strrrrr", ">>" + dataobj.getString("id"));
+                                    x.setClient_id(Integer.parseInt(dataobj.getString("id")));
+                                    x.setPayment_state(Integer.parseInt(dataobj.getString("payment_st")));
+                                    if(dataModelArrayList.isEmpty()){
+                                        Log.d("befoooooooooore", ">>>>>>>>>>>>>>>>>>0000000000000000" );
 
-                                    playerModel.setClient_id(Integer.parseInt(dataobj.getString("id")));
 
-                                    dataModelArrayList.add(playerModel);
+                                    }
+                                    else{
+
+
+                                        Log.d("befoooooooooore", ">>>>>>>>>11111111111111111111111" );
+                                    }
+
+
+                                    dataModelArrayList.add(x);
+                                    if(dataModelArrayList.isEmpty()){
+                                        Log.d("Aftrrrrrrrrr", ">>>>>>>>>>>>>>>>>>0000000000000000" );
+
+
+                                    }
+                                    else{
+
+
+                                        Log.d("Aftrrrrrrrr", ">>>>>>>>>11111111111111111111111" );
+                                    }
 
                                 }
 
                                 setupListview();
 
-                            }
+
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -104,9 +126,11 @@ public class paymentList extends AppCompatActivity {
     }
 
     private void setupListview(){
-     //   removeSimpleProgressDialog();  //will remove progress dialog
+
+        removeSimpleProgressDialog();  //will remove progress dialog
         listAdapter = new paymentAdapter(this, dataModelArrayList);
         listView.setAdapter(listAdapter);
+
     }
 
     public static void removeSimpleProgressDialog() {

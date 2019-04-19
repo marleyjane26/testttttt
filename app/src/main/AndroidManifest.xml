@@ -24,13 +24,14 @@
             </intent-filter>
         </activity>
         <activity
-        android:name=".homepage"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme.NoActionBar"/>
+            android:name=".homepage"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".paymentList" />
         <activity android:name=".Main2Activity" />
-        <activity android:name=".login"></activity>
+        <activity android:name=".login" />
+        <activity android:name=".SinglePayment"></activity>
     </application>
 
 </manifest>
