@@ -1,42 +1,91 @@
 package com.example.hp.isd_2019;
-
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class paymentAdapter extends ArrayAdapter<PaymentModel> {
-    //the hero list that will be displayed
-    private List<PaymentModel> paymentlist;
-    //the context object
-    private Context mCtx;
-    //here we are getting the movies list and context
-    //so while creating the object of this adapter class we need to give movie list and context
-    public paymentAdapter(List<PaymentModel> paymentlist, Context mCtx) {
-        super(mCtx, R.layout.listpymnt, paymentlist);
-        this.paymentlist = paymentlist;
-        this.mCtx = mCtx;
+
+public class paymentAdapter extends BaseAdapter {
+
+    private Context context;
+    private ArrayList<PaymentModel> dataModelArrayList;
+
+    public paymentAdapter(Context context, ArrayList<PaymentModel> dataModelArrayList) {
+
+        this.context = context;
+        this.dataModelArrayList = dataModelArrayList;
     }
-    //this method will return the list item
+
     @Override
-    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-        //getting the layout inflater
-        LayoutInflater inflater = LayoutInflater.from(mCtx);
-        //creating a view with our xml layout
-        View listViewItem = inflater.inflate(R.layout.listpymnt, null, true);
-        //getting text views
-        TextView textView = listViewItem.findViewById(R.id.pymnt);
-
-        //Getting the json data for the specified position
-        PaymentModel items = paymentlist.get(position);
-        //setting json values to text view
-        textView.setText(items.getid());
-
-        return listViewItem;
+    public int getViewTypeCount() {
+        return getCount();
     }
+    @Override
+    public int getItemViewType(int position) {
+
+        return position;
+    }
+
+    @Override
+    public int getCount() {
+        return dataModelArrayList.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return dataModelArrayList.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
+
+        if (convertView == null) {
+            holder = new ViewHolder();
+            LayoutInflater inflater = (LayoutInflater) context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.listpymnt, null, true);
+
+
+            holder.id = (TextView) convertView.findViewById(R.id.text1);
+            holder.st = (TextView) convertView.findViewById(R.id.text2);
+
+            convertView.setTag(holder);
+        }else {
+            // the getTag returns the viewHolder object set as a tag to the view
+            holder = (ViewHolder)convertView.getTag();
+        }
+
+
+        holder.id.setText("id : "+dataModelArrayList.get(position).getid());
+       if( dataModelArrayList.get(position).getPayment_state()==true){
+
+           holder.st.setText("Payed");
+
+       }
+       else{
+
+           holder.st.setText("not Payed");
+
+       }
+
+        return convertView;
+    }
+
+    private class ViewHolder {
+
+        protected TextView  id,st;
+
+    }
+
 }

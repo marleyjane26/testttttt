@@ -1,6 +1,7 @@
 package com.example.hp.isd_2019;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -84,7 +85,16 @@ public class MainActivity extends AppCompatActivity  {
                 new DataPoint(4, 12)
 
         });
+        series.setColor(Color.rgb(164, 66, 244));
+        series.setThickness(6);
+        series.setDrawBackground(true);
+        series.setBackgroundColor(Color.GREEN);
+        series.setDrawDataPoints(true);
         graph.addSeries(series);
+
+
+
+
 
     }
 }

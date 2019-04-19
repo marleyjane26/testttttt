@@ -4,10 +4,15 @@ public class PaymentModel {
     private int client_id;
     private double balance;
     private int payment_state;
-    String issued_date;
-    String payed_date;
+    private String issued_date;
+    private String payed_date;
 
     public PaymentModel() {
+        this.client_id = 1;
+        this.balance = 2;
+        this.payment_state = 3;
+            this.issued_date = "1";
+        this.payed_date = "0";
     }
 
     public PaymentModel(int client_id, double balance, int payment_state) {
