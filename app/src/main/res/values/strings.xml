@@ -36,11 +36,17 @@
     </string>
     <string name="btn_value">click here</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="aboutUsstring1">Our mission is to</string>
+    <string name="aboutUsstring2">organize</string>
+    <string name="aboutUsstring3">the world informations and make it  </string>
+    <string name="aboutUsstring4"> universally accessible</string>
+    <string name="aboutUsstring5">and</string>
+    <string name="aboutUsstring6"> useful.</string>
 
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
+    ccc
 
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact

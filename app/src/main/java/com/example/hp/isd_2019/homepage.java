@@ -93,16 +93,14 @@ public class homepage extends AppCompatActivity
             startActivity(my_intent);
 
         } else if (id == R.id.nav_creditC) {
-            Intent my_intent= new Intent(homepage.this,creditcardActivity.class);
+            Intent my_intent = new Intent(homepage.this, creditcardActivity.class);
             startActivity(my_intent);
 
+        }else if (id == R.id.nav_contact) {
+            Intent my_intent = new Intent(homepage.this, contactUsActivity.class);
+            startActivity(my_intent);
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
-
-        } else if (id == R.id.nav_contact) {
-            Intent my_intent= new Intent(homepage.this,contactUsActivity.class);
-            startActivity(my_intent);
 
         }
 

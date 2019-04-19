@@ -1,17 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".settingActivity">
+    android:orientation="vertical" >
 
-    <Button
-        android:layout_width="match_parent"
+    <ListView
+        android:id="@+id/simpleListView"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:divider="#9435a7"
+        android:dividerHeight="1dp"
+        />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textColor="#9435a7" />
+</LinearLayout>
 
-
-</android.support.constraint.ConstraintLayout>

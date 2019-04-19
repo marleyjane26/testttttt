@@ -77,13 +77,7 @@
                         android:layout_height="wrap_content"
                         android:textColorHint="#9435a7">
 
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Amper capacity"
-                            android:imeOptions="actionNext"
-                            android:inputType="textPassword"
-                            android:textColorHint="#9435a7" />
+
 
                     </android.support.design.widget.TextInputLayout>
 

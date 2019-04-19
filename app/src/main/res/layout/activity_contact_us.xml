@@ -4,23 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".contactUsActivity">
-    <TextView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt1"
-        android:text="ISD@gmail.com"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:padding="10dp"/>
-    <TextView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt2"
-        android:text="+961000000"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/txt1"/>
+    tools:context=".contactUsActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ISD@gmail.com"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:padding="30dp"
+            android:layout_marginBottom="24dp"
+            android:background="#9435a7"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+96171000000"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:padding="30dp"
+            android:layout_marginBottom="24dp"
+            android:background="#9435a7"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
