@@ -2,7 +2,6 @@ package com.example.hp.isd_2019;
 
 public class creditcard {
     private   int cc_id;
-    private  int id_user;
     private  String name_holder;
     private int cc_number;
     private int expire_date;
@@ -12,7 +11,7 @@ public class creditcard {
     public creditcard(int cc_id,int id_user,String name_holder,int cc_number,int expire_date,double balance){
 
         this.cc_id=cc_id;
-        this.id_user=id_user;
+
         this.cc_number=cc_number;
         this.name_holder=name_holder;
         this.expire_date=expire_date;
@@ -38,18 +37,11 @@ public class creditcard {
         return balance;
     }
 
-    public int getId_user() {
-        return id_user;
-    }
-
 
     public void setCc_id(int cc_id) {
         this.cc_id = cc_id;
     }
 
-    public void setId_user(int id_user) {
-        this.id_user = id_user;
-    }
 
     public void setName_holder(String name_holder) {
         this.name_holder = name_holder;

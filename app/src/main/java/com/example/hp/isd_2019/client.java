@@ -4,11 +4,16 @@ public class client {
     private int clientId;
     private String firstName;
     private String lastName;
-    private  int phoneNumber;
+    private int phoneNumber;
     private String city;
     private String street;
     private String email;
-
+    private String cost_1k;
+    private String Supplier_fullname;
+    private String Supplier_Contact;
+    private int Cumulative ;
+    private int Bill;
+    private boolean device_st;
     public client(int clientId,int phoneNumber,String firstName,String lastName, String city,String street, String email)
     {
 

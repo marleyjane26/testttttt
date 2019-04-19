@@ -29,7 +29,10 @@
         <activity android:name=".settingActivity" />
         <activity android:name=".creditcardActivity" />
         <activity android:name=".contactUsActivity" />
-        <activity android:name=".editProfileActivity"></activity>
+        <activity android:name=".editProfileActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

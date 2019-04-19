@@ -8,17 +8,15 @@ public class PaymentModel {
     private String payed_date;
 
     public PaymentModel() {
-        this.client_id = 1;
-        this.balance = 2;
-        this.payment_state = 3;
-            this.issued_date = "1";
-        this.payed_date = "0";
+
     }
 
-    public PaymentModel(int client_id, double balance, int payment_state) {
+    public PaymentModel(int client_id, double balance, int payment_state, String issued_date, String payed_date) {
         this.client_id = client_id;
         this.balance = balance;
         this.payment_state = payment_state;
+        this.issued_date = issued_date;
+        this.payed_date = payed_date;
     }
 
     public int getid() {
