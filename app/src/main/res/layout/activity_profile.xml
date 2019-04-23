@@ -1,20 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="the profile will be displayed from php"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:padding="20dp"
-       />
+    tools:context=".ProfileActivity">
 
 
-
-
-        </android.support.constraint.ConstraintLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="First Name"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:padding="20dp"
+    android:id="@+id/Fname"
+    android:textColor="#9435a7"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="firstName"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/firstName"
+app:layout_constraintTop_toBottomOf="@+id/Fname"
+android:textColor="#186785"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="lasttName"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/lastName"
+app:layout_constraintTop_toBottomOf="@+id/Fname"
+app:layout_constraintLeft_toRightOf="@+id/firstName"
+    android:textColor="#186785"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Last Name"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/Lname"
+app:layout_constraintLeft_toRightOf="@+id/Fname"
+    android:textColor="#9435a7"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="City"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/city"
+app:layout_constraintTop_toBottomOf="@+id/firstName"
+    android:textColor="#9435a7"  />
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="cityName"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/cityName"
+app:layout_constraintTop_toBottomOf="@+id/lastName"
+app:layout_constraintLeft_toRightOf="@+id/city"
+    android:textColor="#186785"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Address"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/address"
+app:layout_constraintTop_toBottomOf="@+id/city"
+    android:textColor="#9435a7"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="addressName"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/addressNamee"
+app:layout_constraintTop_toBottomOf="@+id/cityName"
+app:layout_constraintLeft_toRightOf="@+id/address"
+    android:textColor="#186785"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Street"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/street"
+app:layout_constraintTop_toBottomOf="@+id/address"
+    android:textColor="#9435a7"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="streetName"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/streetName"
+app:layout_constraintTop_toBottomOf="@+id/address"
+app:layout_constraintLeft_toRightOf="@id/street"
+    android:textColor="#186785"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Email"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/email"
+app:layout_constraintTop_toBottomOf="@+id/street"
+    android:textColor="#9435a7"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="emailName"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/emailName"
+app:layout_constraintTop_toBottomOf="@+id/streetName"
+app:layout_constraintLeft_toRightOf="@+id/email"
+    android:textColor="#186785"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Phone"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/phone"
+app:layout_constraintTop_toBottomOf="@+id/email"
+    android:textColor="#9435a7"/>
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="phoneNumber"
+android:textStyle="bold"
+android:textSize="20sp"
+android:padding="20dp"
+android:id="@+id/phoneNumber"
+app:layout_constraintTop_toBottomOf="@+id/emailName"
+app:layout_constraintLeft_toRightOf="@+id/phone"
+    android:textColor="#186785"/>
+    </android.support.constraint.ConstraintLayout>
