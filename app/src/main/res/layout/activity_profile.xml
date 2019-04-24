@@ -68,48 +68,31 @@ android:id="@+id/cityName"
 app:layout_constraintTop_toBottomOf="@+id/lastName"
 app:layout_constraintLeft_toRightOf="@+id/city"
     android:textColor="#186785"/>
-<TextView
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Address"
-android:textStyle="bold"
-android:textSize="20sp"
-android:padding="20dp"
-android:id="@+id/address"
-app:layout_constraintTop_toBottomOf="@+id/city"
-    android:textColor="#9435a7"/>
-<TextView
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="addressName"
-android:textStyle="bold"
-android:textSize="20sp"
-android:padding="20dp"
-android:id="@+id/addressNamee"
-app:layout_constraintTop_toBottomOf="@+id/cityName"
-app:layout_constraintLeft_toRightOf="@+id/address"
-    android:textColor="#186785"/>
-<TextView
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Street"
-android:textStyle="bold"
-android:textSize="20sp"
-android:padding="20dp"
-android:id="@+id/street"
-app:layout_constraintTop_toBottomOf="@+id/address"
-    android:textColor="#9435a7"/>
-<TextView
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="streetName"
-android:textStyle="bold"
-android:textSize="20sp"
-android:padding="20dp"
-android:id="@+id/streetName"
-app:layout_constraintTop_toBottomOf="@+id/address"
-app:layout_constraintLeft_toRightOf="@id/street"
-    android:textColor="#186785"/>
+
+    <TextView
+        android:id="@+id/street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="20dp"
+        android:text="Street"
+        android:textColor="#9435a7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+    <TextView
+        android:id="@+id/streetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="20dp"
+        android:text="streetName"
+        android:textColor="#186785"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/street"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
 <TextView
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"

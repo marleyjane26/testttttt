@@ -4,7 +4,7 @@ public class client {
     private int clientId;
     private String firstName;
     private String lastName;
-    private int phoneNumber;
+    private String phoneNumber;
     private String city;
     private String street;
     private String email;
@@ -14,18 +14,12 @@ public class client {
     private int Cumulative ;
     private int Bill;
     private boolean device_st;
-    public client(int clientId,int phoneNumber,String firstName,String lastName, String city,String street, String email)
+    public client()
     {
 
-        this.clientId=clientId;
-        this. firstName=firstName;
-        this.lastName=lastName;
-        this.phoneNumber=phoneNumber;
-        this.city=city;
-        this.street=street;
-        this. email=email;
 
     }
+
 
     public String getFirstName() {
         return firstName;}
@@ -45,7 +39,7 @@ public class client {
     public int getClientId() {
         return clientId;}
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;}
 
     public void setClientId(int clientId) {
@@ -60,7 +54,7 @@ public class client {
         this.lastName = lastName;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

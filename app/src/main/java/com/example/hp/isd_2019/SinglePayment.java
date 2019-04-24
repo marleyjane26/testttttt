@@ -32,7 +32,7 @@ public class SinglePayment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_payment);
 
-        list = findViewById(R.id.single);
+        //list = findViewById(R.id.single);
 
         retrieveJSON();
 

@@ -14,11 +14,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class homepage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -100,6 +103,20 @@ public class homepage extends AppCompatActivity
             Intent my_intent = new Intent(homepage.this, contactUsActivity.class);
             startActivity(my_intent);
         } else if (id == R.id.nav_share) {
+
+
+
+
+
+                  mAuth.signOut();
+
+            Intent intent = new Intent(this,login.class);
+            startActivity(intent);
+            finish();
+
+
+
+
 
 
         }
