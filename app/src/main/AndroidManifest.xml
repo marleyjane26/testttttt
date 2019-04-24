@@ -30,7 +30,8 @@
         <activity android:name=".creditcardActivity" />
         <activity android:name=".contactUsActivity" />
         <activity android:name=".editProfileActivity" />
-        <activity android:name=".aboutUsActivity"></activity>
+        <activity android:name=".aboutUsActivity" />
+        <activity android:name=".addCCActivity"></activity>
     </application>
 
 </manifest>

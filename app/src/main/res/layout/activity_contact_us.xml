@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ISD@gmail.com"
+            android:text="@string/AUE"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:padding="30dp"
@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+96171000000"
+            android:text="@string/AUP"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:padding="30dp"
