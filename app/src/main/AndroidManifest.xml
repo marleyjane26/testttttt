@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ProfileActivity"
-            android:label="login">
+            android:name=".SplashActivity"
+            android:label="SplashActivty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,8 @@
             android:name=".homepage"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SplashActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".paymentList" />
         <activity android:name=".settingActivity" />

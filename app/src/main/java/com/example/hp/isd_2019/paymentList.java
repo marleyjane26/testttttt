@@ -1,6 +1,7 @@
 package com.example.hp.isd_2019;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ import java.util.List;
 public class paymentList extends AppCompatActivity {
 
     private String URLstring = "https://lbpower.000webhostapp.com/api/getpayment4one.php?fk_client=1";
+    int id2next;
     private static ProgressDialog mProgressDialog;
     private ListView listView;
     ArrayList<PaymentModel> dataModelArrayList;
@@ -46,6 +48,17 @@ public class paymentList extends AppCompatActivity {
         listView = findViewById(R.id.listView1);
 
         retrieveJSON();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+               id2next= dataModelArrayList.get(position).getid();
+                Toast.makeText(getApplicationContext(),Integer.toString(id2next),Toast.LENGTH_SHORT).show();
+               Intent myIntent = new Intent(paymentList.this, SinglePayment.class);
+               myIntent.putExtra("id", id2next);
+              startActivity(myIntent);
+
+
+            }
+        });
 
     }
 
