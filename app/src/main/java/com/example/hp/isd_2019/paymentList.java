@@ -85,7 +85,7 @@ public class paymentList extends AppCompatActivity {
                                     PaymentModel x = new PaymentModel();
                                     JSONObject dataobj = dataArray.getJSONObject(i);
                                     Log.d("strrrrr", ">>" + dataobj.getString("id"));
-                                    x.setClient_id(Integer.parseInt(dataobj.getString("id")));
+                                    x.setid(Integer.parseInt(dataobj.getString("id")));
                                     x.setPayment_state(Integer.parseInt(dataobj.getString("payment_st")));
                                     if(dataModelArrayList.isEmpty()){
                                         Log.d("befoooooooooore", ">>>>>>>>>>>>>>>>>>0000000000000000" );
