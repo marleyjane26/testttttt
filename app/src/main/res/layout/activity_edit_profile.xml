@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context="com.example.hp.isd_2019.editProfileActivity">
 
     <View
@@ -16,6 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginBottom="50dp"
         android:background="@drawable/ic_portrait_black_24dp"
+
         />
 
     <ScrollView
@@ -53,10 +55,13 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:hint=" First Name"
                             android:imeOptions="actionNext"
-                            android:textColorHint="#9435a7" />
+                            android:textColorHint="#ffffff"
+                            android:background="@drawable/btn_round"
+                            android:gravity="center"
+                            android:layout_margin="5dp"/>
 
                     </android.support.design.widget.TextInputLayout>
                     <android.support.design.widget.TextInputLayout
@@ -66,11 +71,13 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:hint="Last Name"
                             android:imeOptions="actionNext"
-
-                            android:textColorHint="#9435a7" />
+                            android:textColorHint="#ffffff"
+                            android:background="@drawable/btn_round"
+                            android:gravity="center"
+                            android:layout_margin="5dp"/>
 
                     </android.support.design.widget.TextInputLayout>
                     <android.support.design.widget.TextInputLayout
@@ -89,11 +96,14 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:hint="Email Address"
                             android:imeOptions="actionNext"
                             android:inputType="textEmailAddress"
-                            android:textColorHint="#9435a7" />
+                            android:textColorHint="#ffffff"
+                            android:background="@drawable/btn_round"
+                            android:gravity="center"
+                            android:layout_margin="5dp"/>
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -111,11 +121,13 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:hint="City"
                             android:imeOptions="actionNext"
-
-                            android:textColorHint="#9435a7" />
+                            android:textColorHint="#ffffff"
+                            android:background="@drawable/btn_round"
+                            android:gravity="center"
+                            android:layout_margin="5dp"/>
 
                     </android.support.design.widget.TextInputLayout>
                     <android.support.design.widget.TextInputLayout
@@ -125,11 +137,13 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
                             android:hint="Street"
                             android:imeOptions="actionNext"
-
-                            android:textColorHint="#9435a7" />
+                            android:textColorHint="#ffffff"
+                            android:background="@drawable/btn_round"
+                            android:gravity="center"
+                            android:layout_margin="5dp"/>
 
                     </android.support.design.widget.TextInputLayout>
                     <android.support.design.widget.TextInputLayout
@@ -139,13 +153,29 @@
 
                         <EditText
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@drawable/btn_round"
+                            android:gravity="center"
                             android:hint="Phone"
                             android:imeOptions="actionNext"
-
-                            android:textColorHint="#9435a7" />
+                            android:textColorHint="#ffffff"
+                            android:layout_margin="5dp"/>
 
                     </android.support.design.widget.TextInputLayout>
+
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/btn_round"
+                        android:gravity="center"
+                        android:hint="SUBMIT"
+                        android:imeOptions="actionNext"
+                        android:textColorHint="#ffffff"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"/>
+
+
 
 
                 </LinearLayout>
