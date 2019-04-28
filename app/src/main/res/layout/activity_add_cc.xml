@@ -14,7 +14,8 @@
         android:textAlignment="center"
         android:padding="10dp"
         android:id="@+id/cnum"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/txt_round"/>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,8 +32,9 @@
         android:textAlignment="center"
         android:padding="10dp"
         android:id="@+id/cNameHolder"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintTop_toBottomOf="@+id/cimg"/>
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/cimg"
+        android:background="@drawable/txt_round"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -66,9 +68,10 @@
         android:textAlignment="center"
         android:padding="10dp"
         android:id="@+id/expirationDate"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/eTxtHolder"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="@drawable/txt_round"/>
 
     <EditText
         android:id="@+id/expText"
@@ -102,8 +105,9 @@
         android:textAlignment="center"
         android:padding="15dp"
         android:id="@+id/cvv"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintTop_toBottomOf="@+id/expText"/>
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/expText"
+        android:background="@drawable/txt_round"/>
 
 
     <EditText
@@ -126,7 +130,7 @@
         android:layout_margin="20dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/btn_round"
         android:gravity="center"
         android:text="Submit"
 
@@ -144,6 +148,6 @@
         android:gravity="center"
         android:layout_margin="20dp"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/btn_round"
         />
 </android.support.constraint.ConstraintLayout>
