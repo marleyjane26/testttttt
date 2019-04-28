@@ -112,7 +112,7 @@
          android:layout_marginTop="-1dp"
          android:layout_toEndOf="@+id/consumption"
          android:padding="20dp"
-         android:text="consumption:"
+         android:text="................"
          android:textColor="@color/blue"
          android:textSize="20sp" />
 
@@ -125,7 +125,7 @@
          android:layout_marginTop="12dp"
          android:layout_toEndOf="@+id/costKw"
          android:padding="20dp"
-         android:text="cost:"
+         android:text="........."
          android:textColor="@color/blue"
          android:textSize="20sp" />
 
@@ -139,7 +139,7 @@
          android:layout_marginTop="2dp"
          android:layout_toEndOf="@+id/issuedDate"
          android:padding="20dp"
-         android:text="issued:"
+         android:text="..............."
          android:textColor="@color/blue"
          android:textSize="20sp" />
 
@@ -152,7 +152,7 @@
          android:layout_marginTop="156dp"
          android:layout_toEndOf="@+id/total"
          android:padding="20dp"
-         android:text="total:"
+         android:text="..............."
          android:textColor="@color/blue"
          android:textSize="20sp" />
 
@@ -161,15 +161,17 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_alignTop="@+id/costKw"
-         android:layout_marginStart="14dp"
-         android:layout_marginTop="222dp"
+         android:layout_marginStart="11dp"
+         android:layout_marginTop="219dp"
          android:layout_toEndOf="@+id/PaymentStatus"
          android:padding="20dp"
-         android:text="status:"
-         android:textColor="@color/blue"
-         android:textSize="20sp" />
+         android:text=".............."
+         android:textColor="@color/red"
+         android:textSize="20sp"
+         android:textStyle="bold" />
 
      <Button
+         android:id="@+id/btn"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_alignParentEnd="true"
@@ -178,9 +180,23 @@
          android:layout_marginEnd="7dp"
          android:layout_marginBottom="15dp"
          android:layout_toEndOf="@+id/jsonStatus"
+         android:background="@color/colorPrimaryDark"
          android:text="Pay Now"
-         android:textColor="#fff"
-         android:background="@color/colorPrimaryDark"/>
+         android:textColor="#fff" />
+
+     <TextView
+         android:id="@+id/idint"
+         android:layout_width="117dp"
+         android:layout_height="53dp"
+         android:layout_alignParentStart="true"
+         android:layout_alignParentTop="true"
+         android:layout_alignParentEnd="true"
+         android:layout_marginStart="115dp"
+         android:layout_marginTop="7dp"
+         android:layout_marginEnd="152dp"
+         android:text=".........."
+         android:textSize="20sp"/>
+
  </RelativeLayout>
 
 

@@ -18,8 +18,8 @@ import java.util.concurrent.Executor;
 public class login extends AppCompatActivity {
 
 
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
+
+    private FirebaseAuth.AuthStateListener mAuthListener; private FirebaseAuth mAuth;
 
     // UI references.
     private EditText mEmail, mPassword;
@@ -67,13 +67,13 @@ public class login extends AppCompatActivity {
             }
         });
 
-        btnSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mAuth.signOut();
-                toastMessage("Signing Out...");
-            }
-        });
+       // btnSignOut.setOnClickListener(new View.OnClickListener() {
+      //      @Override
+      //      public void onClick(View view) {
+      //          mAuth.signOut();
+       //         toastMessage("Signing Out...");
+      //      }
+     //   });
 
     }
 
