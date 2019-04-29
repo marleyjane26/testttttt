@@ -191,7 +191,8 @@
             android:layout_toEndOf="@+id/jsonStatus"
             android:background="@drawable/btn_round"
             android:text="Pay Now"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            android:id="@+id/payNow"/>
     </RelativeLayout>
 
 

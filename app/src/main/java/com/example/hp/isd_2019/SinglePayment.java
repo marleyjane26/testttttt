@@ -45,13 +45,13 @@ public class SinglePayment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_payment);
-        id=(TextView)findViewById(R.id.idint);
+        id=(TextView)findViewById(R.id.SPid);
         cons=(TextView)findViewById(R.id.jsonConsump);
         costof1=(TextView)findViewById(R.id.jsonCost);
         total=(TextView)findViewById(R.id.jsonTotal);
         issued=(TextView)findViewById(R.id.jsonIssued);
         st=(TextView)findViewById(R.id.jsonStatus);
-        btn=(Button) findViewById(R.id.btn);
+        btn=(Button) findViewById(R.id.payNow);
         Intent mIntent = getIntent();
         int intValue = mIntent.getIntExtra("id",0);
         IntId=intValue;
