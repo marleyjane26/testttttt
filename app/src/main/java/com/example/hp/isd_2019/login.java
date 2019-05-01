@@ -43,6 +43,8 @@ public class login extends AppCompatActivity {
                     // User is signed in
                   //  Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     toastMessage("Successfully signed in with: " +user.getUid());
+                    client c =new client();
+                    c.setClientId(user.getUid());
                     Intent my_intent= new Intent(login.this,homepage.class);
                     startActivity(my_intent);
                 } else {

@@ -10,19 +10,33 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/jsonConsump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/SPid"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="9dp"
+            android:layout_toEndOf="@+id/consumption"
+            android:padding="20dp"
+            android:text="consumption:"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/SPid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/PaymentStatus"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="28dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="27dp"
+            android:background="@drawable/txt_round"
             android:padding="20dp"
             android:text="ID:"
             android:textColor="#ffffff"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:background="@drawable/txt_round" />
+            android:textStyle="bold" />
 
 
         <TextView
@@ -113,19 +127,6 @@
             android:textColor="@color/blue"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/jsonConsump"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/SPid"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="9dp"
-            android:layout_toEndOf="@+id/consumption"
-            android:padding="20dp"
-            android:text="consumption:"
-            android:textColor="@color/blue"
-            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/jsonCost"
@@ -181,6 +182,7 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -192,7 +194,17 @@
             android:background="@drawable/btn_round"
             android:text="Pay Now"
             android:textColor="#fff"
-            android:id="@+id/payNow"/>
+            />
+
+        <TextView
+            android:id="@+id/idint"
+            android:layout_width="87dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/jsonConsump"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-37dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView" />
     </RelativeLayout>
 
 
