@@ -33,6 +33,7 @@
         <activity android:name=".aboutUsActivity" />
         <activity android:name=".addCCActivity" />
         <activity android:name=".SinglePayment" />
+        <activity android:name=".Pay"></activity>
     </application>
 
 </manifest>

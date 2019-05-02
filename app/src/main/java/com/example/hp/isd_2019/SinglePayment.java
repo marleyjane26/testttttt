@@ -54,6 +54,17 @@ public class SinglePayment extends AppCompatActivity {
         issued=(TextView)findViewById(R.id.jsonIssued);
         st=(TextView)findViewById(R.id.jsonStatus);
         btn=(Button) findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent activityChangeIntent = new Intent(SinglePayment.this, Pay.class);
+
+              //  activityChangeIntent.putExtra("id");
+
+                //TODO:SEND payment attruibe to pay activty and get the credit information to send also to post php file //
+                startActivity(activityChangeIntent);
+            }
+        });
         Intent mIntent = getIntent();
         int intValue = mIntent.getIntExtra("id",0);
         IntId=intValue;
