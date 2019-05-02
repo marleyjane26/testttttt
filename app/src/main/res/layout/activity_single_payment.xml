@@ -10,19 +10,33 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/jsonConsump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/SPid"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="9dp"
+            android:layout_toEndOf="@+id/consumption"
+            android:padding="20dp"
+            android:text="consumption:"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/SPid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/PaymentStatus"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="28dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="27dp"
+            android:background="@drawable/txt_round"
             android:padding="20dp"
             android:text="ID:"
             android:textColor="#ffffff"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:background="@drawable/txt_round" />
+            android:textStyle="bold" />
 
 
         <TextView
@@ -113,19 +127,6 @@
             android:textColor="@color/blue"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/jsonConsump"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/SPid"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="9dp"
-            android:layout_toEndOf="@+id/consumption"
-            android:padding="20dp"
-            android:text="consumption:"
-            android:textColor="@color/blue"
-            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/jsonCost"
@@ -159,8 +160,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/costKw"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="149dp"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="154dp"
             android:layout_toEndOf="@+id/total"
             android:padding="20dp"
             android:text="total:"
@@ -172,7 +173,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/costKw"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="14dp"
             android:layout_marginTop="222dp"
             android:layout_toEndOf="@+id/PaymentStatus"
             android:padding="20dp"
@@ -181,18 +182,29 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/payNow"
+            android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="64dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="0dp"
             android:layout_toEndOf="@+id/jsonStatus"
             android:background="@drawable/btn_round"
             android:text="Pay Now"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/idint"
+            android:layout_width="87dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/jsonConsump"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-37dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView" />
     </RelativeLayout>
 
 

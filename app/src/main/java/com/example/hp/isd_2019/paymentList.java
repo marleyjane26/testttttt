@@ -23,6 +23,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,8 +33,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class paymentList extends AppCompatActivity {
-
-    private String URLstring = "https://lbpower.000webhostapp.com/api/getpayment4one.php?fk_client=1";
+    String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+    private String URLstring = "https://lbpower.000webhostapp.com/api/getpayment4one.php?fk_client="+currentuser;
     int id2next;
     private static ProgressDialog mProgressDialog;
     private ListView listView;

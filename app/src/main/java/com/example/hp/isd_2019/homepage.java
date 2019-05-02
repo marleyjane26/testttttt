@@ -36,13 +36,31 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class homepage extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+
+public class homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    public  void main(String[] args) {
+        Runnable runnable = new Runnable() {
+            public void run() {
+                retrieveJSON();
+
+            }
+        };
+        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+        service.scheduleAtFixedRate(runnable, 1000,5000, TimeUnit.SECONDS);
+    }
+
+    String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
     private static ProgressDialog mProgressDialog;
     TextView kwhText;
     TextView billText;
     private FirebaseAuth mAuth;
-    private String URLstring = "https://lbpower.000webhostapp.com/api/getkwh.php?fk_client=1";
+    private String URLstring = "https://lbpower.000webhostapp.com/api/getkwh.php?fk_client="+currentuser;
 
     boolean doubleBackToExitPressedOnce = false;
     @Override

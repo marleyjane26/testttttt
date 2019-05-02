@@ -1,7 +1,7 @@
 package com.example.hp.isd_2019;
 
 public class PaymentModel {
-    private int client_id;
+    private int id;
     private double Total;
     private double consumption;
     private double costof1kw;
@@ -14,7 +14,7 @@ public class PaymentModel {
     }
 
     public PaymentModel(int client_id, double total, double consumption, double costof1kw, int payment_state, String issued_date, String payed_date) {
-        this.client_id = client_id;
+        this.id = client_id;
         Total = total;
         this.consumption = consumption;
         this.costof1kw = costof1kw;
@@ -24,7 +24,7 @@ public class PaymentModel {
     }
 
     public int getid() {
-        return client_id;
+        return id;
     }
 
 
@@ -45,7 +45,7 @@ public class PaymentModel {
         Total = total;
     }
     public void setid(int id) {
-        client_id = id;
+        this.id = id;
     }
     public double getConsumption() {
         return consumption;

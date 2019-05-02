@@ -20,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,9 +31,10 @@ import java.util.ArrayList;
 public class SinglePayment extends AppCompatActivity {
     TextView id,cons,total,costof1,issued,st;
     Button btn;
-    int uid=1;
+    String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
     int IntId;
-    private String URLstring = "https://lbpower.000webhostapp.com/api/getsingle.php?fk_client="+uid+"&id=";
+    private String URLstring = "https://lbpower.000webhostapp.com/api/getsingle.php?fk_client="+currentuser+"&id=";
     private static ProgressDialog mProgressDialog;
     TextView list;
     //<!--TODO:ADD THE UID FROM FIREBASE ATHENTACATED USER LATER... NOW IS FOR TESTING-->
@@ -45,13 +47,24 @@ public class SinglePayment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_payment);
-        id=(TextView)findViewById(R.id.SPid);
+        id=(TextView)findViewById(R.id.idint);
         cons=(TextView)findViewById(R.id.jsonConsump);
         costof1=(TextView)findViewById(R.id.jsonCost);
         total=(TextView)findViewById(R.id.jsonTotal);
         issued=(TextView)findViewById(R.id.jsonIssued);
         st=(TextView)findViewById(R.id.jsonStatus);
-        btn=(Button) findViewById(R.id.payNow);
+        btn=(Button) findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent activityChangeIntent = new Intent(SinglePayment.this, Pay.class);
+
+              //  activityChangeIntent.putExtra("id");
+
+                //TODO:SEND payment attruibe to pay activty and get the credit information to send also to post php file //
+                startActivity(activityChangeIntent);
+            }
+        });
         Intent mIntent = getIntent();
         int intValue = mIntent.getIntExtra("id",0);
         IntId=intValue;

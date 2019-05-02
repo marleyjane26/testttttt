@@ -14,6 +14,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,7 +24,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity {
-    private String URLstring = "https://lbpower.000webhostapp.com/api/getprofile4one.php?fk_client=1";
+
+    String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+    private String URLstring = "https://lbpower.000webhostapp.com/api/getprofile4one.php?fk_client="+currentuser;
     TextView fname,lname,city,street,phone,email;
 
     private static ProgressDialog mProgressDialog;
