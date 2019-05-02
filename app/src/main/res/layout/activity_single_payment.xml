@@ -160,8 +160,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/costKw"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="154dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="152dp"
             android:layout_toEndOf="@+id/total"
             android:padding="20dp"
             android:text="total:"
@@ -197,14 +197,18 @@
             />
 
         <TextView
-            android:id="@+id/idint"
-            android:layout_width="87dp"
-            android:layout_height="60dp"
-            android:layout_alignStart="@+id/jsonConsump"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="-37dp"
-            android:layout_marginTop="5dp"
-            android:text="TextView" />
+            android:id="@+id/jsonid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/SPid"
+            android:layout_marginStart="78dp"
+            android:layout_marginTop="-68dp"
+            android:layout_toEndOf="@+id/SPid"
+            android:padding="20dp"
+            android:text="id:"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 
