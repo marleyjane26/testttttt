@@ -32,7 +32,8 @@
         <activity android:name=".editProfileActivity" />
         <activity android:name=".aboutUsActivity" />
         <activity android:name=".addCCActivity" />
-        <activity android:name=".ResetPass"></activity>
+        <activity android:name=".ResetPass" />
+        <activity android:name=".viewCC"></activity>
     </application>
 
 </manifest>
