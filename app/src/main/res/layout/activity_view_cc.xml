@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewCC">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card number "
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:id="@+id/cnum"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/txt_round"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_credit_card_black_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cnum"
+        android:id="@+id/cimg"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cardname Holder "
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:id="@+id/cNameHolder"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/cimg"
+        android:background="@drawable/txt_round"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cNameHolder"
+        android:hint="Name holder"
+        android:textColorHint="@color/blue"
+        android:id="@+id/ccname"
+        android:padding="10dp"
+       android:textSize="20sp" />
+
+
+    d<TextView
+        android:id="@+id/ccnb"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter 16 digit card"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textAlignment="viewStart"
+        android:textColorHint="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/cimg"
+        app:layout_constraintTop_toBottomOf="@+id/cnum" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expiration date "
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:id="@+id/expirationDate"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/ccname"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/txt_round"/>
+
+    <TextView
+        android:id="@+id/expDate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="mm"
+        android:padding="10dp"
+        android:textColorHint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@+id/expirationDate"
+        app:layout_constraintVertical_weight="1"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="yyyy"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColorHint="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/expDate"
+        app:layout_constraintTop_toBottomOf="@+id/expirationDate"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CVV "
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:id="@+id/cvv"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/expDate"
+        android:background="@drawable/txt_round"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cvv"
+        android:hint="3 digit"
+        android:textColorHint="@color/blue"
+        android:id="@+id/cvvText"
+        android:padding="15dp"
+        android:textAlignment="center"
+      android:textSize="20sp"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
