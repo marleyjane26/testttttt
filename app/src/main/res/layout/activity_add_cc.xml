@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cNameHolder"
         android:hint="Name holder"
         android:textColorHint="@color/blue"
-        android:id="@+id/eTxtHolder"
+        android:id="@+id/ccname"
         android:padding="10dp"
     />
 
@@ -69,12 +69,12 @@
         android:padding="10dp"
         android:id="@+id/expirationDate"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/eTxtHolder"
+        app:layout_constraintTop_toBottomOf="@+id/ccname"
         android:layout_marginTop="10dp"
         android:background="@drawable/txt_round"/>
 
     <EditText
-        android:id="@+id/expText"
+        android:id="@+id/expDate"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="mm"
@@ -87,7 +87,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/expirationDate"
-        app:layout_constraintLeft_toRightOf="@+id/expText"
+        app:layout_constraintLeft_toRightOf="@+id/expDate"
         android:hint="yyyy"
         android:textColorHint="@color/blue"
         android:id="@+id/expText2"
@@ -106,7 +106,7 @@
         android:padding="15dp"
         android:id="@+id/cvv"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/expText"
+        app:layout_constraintTop_toBottomOf="@+id/expDate"
         android:background="@drawable/txt_round"/>
 
 
