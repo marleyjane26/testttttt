@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addCCActivity">
+    >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,28 +36,32 @@
         android:background="@drawable/txt_round"/>
 
     <EditText
+        android:id="@+id/nameE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/cNameHolder"
         android:hint="Name holder"
-        android:textColorHint="@color/blue"
-        android:id="@+id/ccname"
         android:padding="10dp"
-    />
+        android:textColorHint="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/cNameHolder"
+        tools:layout_editor_absoluteX="34dp" />
+
+
 
 
     <EditText
-        android:id="@+id/cEtext"
-        android:layout_width="300dp"
+        android:maxLength="16"
+        android:id="@+id/numberE"
+           android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Enter 16 digit card"
         android:selectAllOnFocus="false"
         android:singleLine="false"
         android:textAlignment="viewStart"
         android:textColorHint="@color/blue"
+        android:textSize="20sp"
         app:layout_constraintLeft_toRightOf="@+id/cimg"
-        app:layout_constraintTop_toBottomOf="@+id/cnum"
-      />
+        app:layout_constraintTop_toBottomOf="@+id/cnum" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,32 +72,35 @@
         android:padding="10dp"
         android:id="@+id/expirationDate"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/ccname"
+        app:layout_constraintTop_toBottomOf="@+id/nameE"
         android:layout_marginTop="10dp"
         android:background="@drawable/txt_round"/>
 
     <EditText
-        android:id="@+id/expDate"
-        android:layout_width="200dp"
+        android:id="@+id/monthE"
+        android:maxLength="2"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:hint="mm"
         android:padding="10dp"
         android:textColorHint="@color/blue"
+        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/expirationDate"
-        app:layout_constraintVertical_weight="1"
-       />
+        app:layout_constraintVertical_weight="1" />
+
     <EditText
+        android:id="@+id/yearE"
+        android:maxLength="4"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/expirationDate"
-        app:layout_constraintLeft_toRightOf="@+id/expDate"
         android:hint="yyyy"
-        android:textColorHint="@color/blue"
-        android:id="@+id/expText2"
         android:padding="10dp"
         android:textAlignment="center"
-        app:layout_constraintVertical_weight="1"
-       />
+        android:textColorHint="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/monthE"
+        app:layout_constraintTop_toBottomOf="@+id/expirationDate"
+        app:layout_constraintVertical_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -106,7 +112,7 @@
         android:padding="15dp"
         android:id="@+id/cvv"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/expDate"
+        app:layout_constraintTop_toBottomOf="@+id/monthE"
         android:background="@drawable/txt_round"/>
 
 
@@ -116,38 +122,24 @@
         app:layout_constraintTop_toBottomOf="@+id/cvv"
         android:hint="3 digit"
         android:textColorHint="@color/blue"
-        android:id="@+id/cvvText"
+        android:id="@+id/cvcE"
         android:padding="15dp"
         android:textAlignment="center"
+        android:textSize="20sp"
+        android:maxLength="3"
         />
 
-
     <Button
-        android:id="@+id/submit"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="150dp"
+        android:id="@+id/btnsave"
+        android:layout_width="87dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_round"
-        android:gravity="center"
-        android:text="Submit"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        android:textColor="#fff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvvText" />
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:textColor="#fff"
-        android:id="@+id/cancel"
-        app:layout_constraintTop_toBottomOf="@+id/cvvText"
-        app:layout_constraintLeft_toRightOf="@+id/submit"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:background="@drawable/btn_round"
-        />
+
 </android.support.constraint.ConstraintLayout>

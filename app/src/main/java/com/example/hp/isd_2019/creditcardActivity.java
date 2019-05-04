@@ -2,9 +2,15 @@ package com.example.hp.isd_2019;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,24 +26,53 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class creditcardActivity extends AppCompatActivity {
 
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
-    private String URLstring = "https://lbpower.000webhostapp.com/api/getcc4one.php?fk_client="+currentuser;
-    TextView ccNum,ccNam,exD,exY,ccvC;
+    private String URLstring = "https://lbpower.000webhostapp.com/api/cc4one.php?fk_client="+currentuser;
+    TextView name,number,month,year,cvc;
+    SwipeRefreshLayout pullToRefresh;
+    TextView empty;
+
 
     private static ProgressDialog mProgressDialog;
+    private ListView listView;
+    ArrayList<creditcard> dataModelArrayList=new ArrayList<creditcard>();
+    private ListAdapter listAdapter;
+    private ListAdapter emptys;
 
+
+    FloatingActionButton add;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_cc);
-        ccNum=(TextView)findViewById(R.id.ccnb);
-        ccNam=(TextView)findViewById(R.id.ccname);
-        exD=(TextView)findViewById(R.id.expDate);
-        exY=(TextView)findViewById(R.id.year);
-        ccvC=(TextView)findViewById(R.id.cvv);
-        retrieveJSON();
+        setContentView(R.layout.activity_creditcard);
+
+       listView= findViewById(R.id.cclist);
+       retrieveJSON();
+       pullToRefresh = (SwipeRefreshLayout) findViewById(R.id.pullToRefresh);
+       // pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+          //  @Override
+          //  public void onRefresh() {
+            //    listView.setEmptyView(findViewById(R.id.empty_list_item));
+
+            //    pullToRefresh.setRefreshing(false);
+             //   retrieveJSON();
+           // }
+       // });
+
+
+       add=(FloatingActionButton) findViewById(R.id.btnadd);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(creditcardActivity.this, addCCActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
     }
     private void retrieveJSON() {
 
@@ -60,23 +95,27 @@ public class creditcardActivity extends AppCompatActivity {
 
                                 creditcard x = new creditcard();
                                 JSONObject dataobj = dataArray.getJSONObject(i);
-                                Log.d("strrrrr", ">>" + dataobj.getString("fname"));
+                                Log.d("strrrrr", ">>" + dataobj.getString("id_cc"));
                                 x.setCc_number(dataobj.getString("cc_number"));
                                 x.setName_holder(dataobj.getString("name_holder"));
-                                x.setExpire_date(dataobj.getString("expire_date"));
-                                x.setYear(dataobj.getString("year"));
                                 x.setCvc(dataobj.getString("cvc"));
-
-                                ccNum.setText(x.getCc_number());
-                                ccNam.setText(x.getName_holder());
-                                exD.setText(x.getExpire_date());
-                                exY.setText(x.getYear());
-                                ccvC.setText(x.getCvc());
+                                x.setBalance(dataobj.getString("balance"));
+                                x.setCc_id(dataobj.getString("id_cc"));
+                                x.setExpire_date(dataobj.getString("expire_date"));
 
 
-                                removeSimpleProgressDialog();
+                                dataModelArrayList.add(x);
+                          if(dataModelArrayList.size()>=2){
+                              add.hide();
+
+                              }else{
+
+                            add.show(); }
 
                             }
+
+                            setupListview();
+
 
 
                         } catch (JSONException e) {
@@ -100,6 +139,13 @@ public class creditcardActivity extends AppCompatActivity {
 
     }
 
+    private void setupListview(){
+
+        removeSimpleProgressDialog();  //will remove progress dialog
+        listAdapter = new ccadapter(this, dataModelArrayList);
+        listView.setAdapter(listAdapter);
+
+    }
 
     public static void removeSimpleProgressDialog() {
         try {
@@ -140,6 +186,5 @@ public class creditcardActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
 
 }

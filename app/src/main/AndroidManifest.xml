@@ -22,7 +22,7 @@
             android:name=".homepage"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".loginPage" />
+        <activity android:name=".login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".paymentList" />
         <activity android:name=".ProfileActivity" />
@@ -33,7 +33,9 @@
         <activity android:name=".aboutUsActivity" />
         <activity android:name=".addCCActivity" />
         <activity android:name=".ResetPass" />
-        <activity android:name=".viewCC"></activity>
+        <activity android:name=".SinglePayment" />
+        <activity android:name=".Pay" />
+        <activity android:name=".Forget_Password"></activity>
     </application>
 
 </manifest>

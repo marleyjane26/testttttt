@@ -23,7 +23,7 @@ public class login extends AppCompatActivity {
 
     // UI references.
     private EditText mEmail, mPassword;
-    private Button btnSignIn,btnSignOut,btnAddItems;
+    private Button btnSignIn,btnSignOut,btnAddItems,forget;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,7 @@ public class login extends AppCompatActivity {
         mEmail = (EditText) findViewById(R.id.input_email);
         mPassword = (EditText) findViewById(R.id.input_password);
         btnSignIn = (Button) findViewById(R.id.btn_login);
+        forget=(Button) findViewById(R.id.forgetbtn);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -68,7 +69,13 @@ public class login extends AppCompatActivity {
                 }
             }
         });
-
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(login.this, Forget_Password.class);
+                startActivity(myIntent);
+            }
+        });
        // btnSignOut.setOnClickListener(new View.OnClickListener() {
       //      @Override
       //      public void onClick(View view) {

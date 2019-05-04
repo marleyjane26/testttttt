@@ -5,10 +5,15 @@ public class creditcard {
     private  String name_holder;
     private String cc_number;
     private String expire_date;
-    private String year;
     private String balance;
     private String Cvc;
 
+    public creditcard() {
+
+
+
+
+    }
 
     public String getCc_id() {
         return cc_id;
@@ -26,9 +31,6 @@ public class creditcard {
         return expire_date;
     }
 
-    public String getYear() {
-        return year;
-    }
 
     public String getBalance() {
         return balance;
@@ -54,16 +56,30 @@ public class creditcard {
         this.expire_date = expire_date;
     }
 
-    public void setYear(String year) {
-        this.year = year;
-    }
 
     public void setBalance(String balance) {
         this.balance = balance;
     }
 
     public void setCvc(String cvc) {
-        Cvc = cvc;
+        this.Cvc = cvc;
     }
+
+
+    public String getyear(){
+
+
+        String [] partsts= getExpire_date().split("-");
+        return  partsts[0];
+
+    }
+    public String getmonth(){
+
+
+        String [] partsts= getExpire_date().split("-");
+        return  partsts[1];
+
+    }
+
 }
 

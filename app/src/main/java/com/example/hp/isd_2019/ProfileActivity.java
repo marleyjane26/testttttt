@@ -2,9 +2,12 @@ package com.example.hp.isd_2019;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
     private String URLstring = "https://lbpower.000webhostapp.com/api/getprofile4one.php?fk_client="+currentuser;
     TextView fname,lname,city,street,phone,email;
+    FloatingActionButton edits;
 
     private static ProgressDialog mProgressDialog;
     @Override
@@ -39,11 +43,21 @@ public class ProfileActivity extends AppCompatActivity {
         street=(TextView)findViewById(R.id.streetName);
         phone=(TextView)findViewById(R.id.phoneNumber);
         email=(TextView)findViewById(R.id.emailName);
+       edits=(FloatingActionButton) findViewById(R.id.btn);
         super.onCreate(savedInstanceState);
-
         retrieveJSON();
+        edits.setOnClickListener(new View.OnClickListener() {
+         @Override
+           public void onClick(View v) {
+               Toast.makeText(getApplicationContext(),"yopeee ",Toast.LENGTH_SHORT).show();
+               Intent myIntent = new Intent(ProfileActivity.this, editProfileActivity.class);
+            //  myIntent.putExtra("id", id2next);
+             startActivity(myIntent); }
+       });
+
 
     }
+
 
 
     private void retrieveJSON() {

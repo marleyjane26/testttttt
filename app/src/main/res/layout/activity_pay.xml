@@ -40,7 +40,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="137dp"
         android:background="@drawable/bg_theme"
-        android:text="OK"
+        android:text="Pay"
         android:textColor="#ffffff" />
 
 </RelativeLayout>

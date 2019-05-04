@@ -29,7 +29,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class SinglePayment extends AppCompatActivity {
-    TextView id,cons,total,costof1,issued,st;
+    TextView id,cons,total,costof1,issued,payed,payedtext;
     Button btn;
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -47,12 +47,13 @@ public class SinglePayment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_payment);
-        id=(TextView)findViewById(R.id.idint);
+        id=(TextView)findViewById(R.id.jsonid);
         cons=(TextView)findViewById(R.id.jsonConsump);
         costof1=(TextView)findViewById(R.id.jsonCost);
         total=(TextView)findViewById(R.id.jsonTotal);
         issued=(TextView)findViewById(R.id.jsonIssued);
-        st=(TextView)findViewById(R.id.jsonStatus);
+        payed=(TextView)findViewById(R.id.jsonStatus);
+        payedtext=(TextView)findViewById(R.id.PaymentStatus);
         btn=(Button) findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -104,15 +105,13 @@ public class SinglePayment extends AppCompatActivity {
                                 x.setPayment_state(Integer.parseInt(dataobj.getString("payment_st")));
                                 issued.setText(dataobj.getString("issued_date"));
                                 if(x.getPayment_state()){
-
-                                    st.setText("Payed");
-                                    st.setTextColor(Color.parseColor("#0cd32a"));
+                                    payed.setText(dataobj.getString("payment_date"));
                                     btn.setVisibility(View.GONE);
 
                                 }else{
 
-                                    st.setText("Unpaid");
-
+                                    payed.setVisibility(View.GONE);
+                                    payedtext.setVisibility(View.GONE);
                                 }
                                 //dataobj.getString("payment_date");
 

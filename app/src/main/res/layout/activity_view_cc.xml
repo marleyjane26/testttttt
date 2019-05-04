@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewCC">
+    >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,13 +42,15 @@
         app:layout_constraintTop_toBottomOf="@+id/cNameHolder"
         android:hint="Name holder"
         android:textColorHint="@color/blue"
-        android:id="@+id/ccname"
+        android:id="@+id/namejson"
         android:padding="10dp"
        android:textSize="20sp" />
 
 
-    d<TextView
-        android:id="@+id/ccnb"
+    d
+
+    <TextView
+        android:id="@+id/numberjson"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Enter 16 digit card"
@@ -69,12 +71,12 @@
         android:padding="10dp"
         android:id="@+id/expirationDate"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/ccname"
+        app:layout_constraintTop_toBottomOf="@+id/namejson"
         android:layout_marginTop="10dp"
         android:background="@drawable/txt_round"/>
 
     <TextView
-        android:id="@+id/expDate"
+        android:id="@+id/monthjson"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="mm"
@@ -85,7 +87,7 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/year"
+        android:id="@+id/yearjson"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="yyyy"
@@ -93,7 +95,7 @@
         android:textAlignment="center"
         android:textColorHint="@color/blue"
         android:textSize="20sp"
-        app:layout_constraintLeft_toRightOf="@+id/expDate"
+        app:layout_constraintLeft_toRightOf="@+id/monthjson"
         app:layout_constraintTop_toBottomOf="@+id/expirationDate"
         app:layout_constraintVertical_weight="1" />
 
@@ -107,7 +109,7 @@
         android:padding="15dp"
         android:id="@+id/cvv"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/expDate"
+        app:layout_constraintTop_toBottomOf="@+id/monthjson"
         android:background="@drawable/txt_round"/>
 
 
@@ -117,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cvv"
         android:hint="3 digit"
         android:textColorHint="@color/blue"
-        android:id="@+id/cvvText"
+        android:id="@+id/digitjson"
         android:padding="15dp"
         android:textAlignment="center"
       android:textSize="20sp"
