@@ -5,13 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".paymentList"
     android:orientation="vertical">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="400dp"
-        android:id="@+id/listView1"
-
-        >
+        android:id="@+id/listView1">
 
     </ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

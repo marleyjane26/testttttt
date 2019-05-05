@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -34,10 +35,10 @@ public class SinglePayment extends AppCompatActivity {
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
     int IntId;
+    ImageView bckgroud;
     private String URLstring = "https://lbpower.000webhostapp.com/api/getsingle.php?fk_client="+currentuser+"&id=";
     private static ProgressDialog mProgressDialog;
     TextView list;
-    //<!--TODO:ADD THE UID FROM FIREBASE ATHENTACATED USER LATER... NOW IS FOR TESTING-->
 
     public void setURLstring(int id) {
         this.URLstring+=id;
@@ -50,6 +51,7 @@ public class SinglePayment extends AppCompatActivity {
         id=(TextView)findViewById(R.id.jsonid);
         cons=(TextView)findViewById(R.id.jsonConsump);
         costof1=(TextView)findViewById(R.id.jsonCost);
+        //bckgroud=(ImageView) findViewById(R.id.imageView2);//TODO:(1:XML)(added to (single /cc/profile))AT THE END must add this overlay to hide xml uppon refresh
         total=(TextView)findViewById(R.id.jsonTotal);
         issued=(TextView)findViewById(R.id.jsonIssued);
         payed=(TextView)findViewById(R.id.jsonStatus);
@@ -60,7 +62,8 @@ public class SinglePayment extends AppCompatActivity {
                 // Perform action on click
                 Intent activityChangeIntent = new Intent(SinglePayment.this, Pay.class);
 
-              //  activityChangeIntent.putExtra("id");
+               activityChangeIntent.putExtra("id",id.getText());
+                activityChangeIntent.putExtra("total",total.getText());
 
                 //TODO:SEND payment attruibe to pay activty and get the credit information to send also to post php file //
                 startActivity(activityChangeIntent);
@@ -116,7 +119,7 @@ public class SinglePayment extends AppCompatActivity {
                                 //dataobj.getString("payment_date");
 
 
-
+                               // bckgroud.setVisibility(View.GONE);//TODO:(1:XML)
                                 removeSimpleProgressDialog();
 
                             }
@@ -148,6 +151,7 @@ public class SinglePayment extends AppCompatActivity {
         try {
             if (mProgressDialog != null) {
                 if (mProgressDialog.isShowing()) {
+
                     mProgressDialog.dismiss();
                     mProgressDialog = null;
                 }

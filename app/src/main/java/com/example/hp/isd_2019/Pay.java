@@ -1,6 +1,7 @@
 package com.example.hp.isd_2019;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +41,12 @@ public class Pay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pay);
+        Intent mIntent = getIntent();
+        int id = mIntent.getIntExtra("id",0);
+        int total = mIntent.getIntExtra("total",0);
+
+
 
         // Assigning ID's to EditText.
       //  FirstName = (EditText) findViewById(R.id.editTextFirstName);
@@ -56,6 +62,22 @@ public class Pay extends AppCompatActivity {
         progressDialog = new ProgressDialog(Pay.this);
 
         // Adding click listener to button.
+
+
+    }
+
+    // Creating method to get value from EditText.
+    public void GetValueFromEditText(){
+
+        FirstNameHolder = FirstName.getText().toString().trim();
+        LastNameHolder = LastName.getText().toString().trim();
+        EmailHolder = Email.getText().toString().trim();
+
+    }
+    public  void send(){
+
+
+
         InsertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,16 +137,6 @@ public class Pay extends AppCompatActivity {
 
             }
         });
-
-    }
-
-    // Creating method to get value from EditText.
-    public void GetValueFromEditText(){
-
-        FirstNameHolder = FirstName.getText().toString().trim();
-        LastNameHolder = LastName.getText().toString().trim();
-        EmailHolder = Email.getText().toString().trim();
-
     }
 
 }

@@ -61,7 +61,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
     TextView billText;
     private FirebaseAuth mAuth;
     private String URLstring = "https://lbpower.000webhostapp.com/api/getkwh.php?fk_client="+currentuser;
-
+//TODO:get more to attruibe from the php:number of supplier &(0/1) if client found in the device table
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -186,7 +186,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
             startActivity(my_intent);
         } else if (id == R.id.nav_share) {
 
-
+//TODO:update the navbar add signout to list
 
 
 
@@ -195,11 +195,6 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
             Intent intent = new Intent(this,login.class);
             startActivity(intent);
             finish();
-
-
-
-
-
 
         }
 

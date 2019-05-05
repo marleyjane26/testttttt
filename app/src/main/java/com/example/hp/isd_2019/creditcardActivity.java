@@ -41,7 +41,7 @@ public class creditcardActivity extends AppCompatActivity {
     private ListView listView;
     ArrayList<creditcard> dataModelArrayList=new ArrayList<creditcard>();
     private ListAdapter listAdapter;
-    private ListAdapter emptys;
+
 
 
     FloatingActionButton add;
@@ -53,16 +53,17 @@ public class creditcardActivity extends AppCompatActivity {
        listView= findViewById(R.id.cclist);
        retrieveJSON();
        pullToRefresh = (SwipeRefreshLayout) findViewById(R.id.pullToRefresh);
-       // pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-          //  @Override
-          //  public void onRefresh() {
-            //    listView.setEmptyView(findViewById(R.id.empty_list_item));
+        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+           public void onRefresh() {
 
-            //    pullToRefresh.setRefreshing(false);
-             //   retrieveJSON();
-           // }
-       // });
-
+               pullToRefresh.setRefreshing(false);
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+           }
+       });
+//TODO: (Done)ADD PULL TO REFRESH ,THE list view keep adding on the past data must delete then add from adapter
 
        add=(FloatingActionButton) findViewById(R.id.btnadd);
         add.setOnClickListener(new View.OnClickListener() {
