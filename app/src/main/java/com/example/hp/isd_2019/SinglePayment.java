@@ -39,6 +39,9 @@ public class SinglePayment extends AppCompatActivity {
     private String URLstring = "https://lbpower.000webhostapp.com/api/getsingle.php?fk_client="+currentuser+"&id=";
     private static ProgressDialog mProgressDialog;
     TextView list;
+    public String totals;
+    public String ids;
+
 
     public void setURLstring(int id) {
         this.URLstring+=id;
@@ -63,7 +66,7 @@ public class SinglePayment extends AppCompatActivity {
                 Intent activityChangeIntent = new Intent(SinglePayment.this, Pay.class);
 
                activityChangeIntent.putExtra("id",id.getText());
-                activityChangeIntent.putExtra("total",total.getText());
+                activityChangeIntent.putExtra("total",totals);
 
                 //TODO:SEND payment attruibe to pay activty and get the credit information to send also to post php file //
                 startActivity(activityChangeIntent);
@@ -105,6 +108,7 @@ public class SinglePayment extends AppCompatActivity {
                                 cons.setText(dataobj.getString("consumption"));
                                costof1.setText(dataobj.getString("costof1"));
                                 total.setText(dataobj.getString("Total"));
+                                totals=dataobj.getString("Total");
                                 x.setPayment_state(Integer.parseInt(dataobj.getString("payment_st")));
                                 issued.setText(dataobj.getString("issued_date"));
                                 if(x.getPayment_state()){
