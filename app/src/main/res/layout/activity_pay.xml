@@ -18,7 +18,8 @@
         android:background="@drawable/txt_round"
         android:text="Select credit card"
         android:textSize="18dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +56,8 @@
         android:layout_marginTop="150dp"
         android:layout_marginEnd="150dp"
         android:background="@drawable/btn_round"
-        android:text="Pay now " />
+        android:text="Pay now "
+        android:textColor="#fff"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
