@@ -12,9 +12,11 @@
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="400dp"
-        android:id="@+id/listView1">
-
+        android:id="@+id/listView1"
+        android:divider="@color/flowerBlue"
+        android:dividerHeight="2dp">
     </ListView>
+
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
