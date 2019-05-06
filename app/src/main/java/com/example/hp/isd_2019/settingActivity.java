@@ -1,19 +1,53 @@
 package com.example.hp.isd_2019;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.Button;
+
 
 public class settingActivity extends AppCompatActivity {
-    // Array of strings...
-    ListView simpleList;
-    String settList[] = {"Send feedback", "App version", "About Us", "Logout"};
 
-    @Override   protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);      setContentView(R.layout.activity_main);
-        simpleList = (ListView)findViewById(R.id.simpleListView);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_setting, R.id.textView, settList);
-        simpleList.setAdapter(arrayAdapter);
+    private Button feedback, appVer, aboutUs;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_setting);
+
+
+        feedback = (Button) findViewById(R.id.feedbtn);
+        appVer = (Button) findViewById(R.id.appVersion);
+        aboutUs = (Button) findViewById(R.id.aboutUs);
+
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(view.getContext(),feedBack.class);
+                startActivity(intent);
+            }
+        });
+
+        appVer.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(view.getContext(),appVersion.class);
+                startActivity(intent);
+            }
+        });
+
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(view.getContext(),aboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

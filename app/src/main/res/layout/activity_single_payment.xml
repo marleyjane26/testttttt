@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,20 +7,25 @@
     android:orientation="vertical"
     tools:context=".SinglePayment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/jsonConsump"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
 
         android:layout_below="@+id/SPid"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="0dp"
         android:layout_toEndOf="@+id/consumption"
         android:padding="20dp"
         android:text="consumption:"
-        android:textColor="@color/blue"
+        android:textColor="#fff"
+        android:background="@color/flowerBlue"
         android:textSize="20sp" />
 
     <TextView
@@ -46,7 +51,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="97dp"
         android:background="@drawable/txt_round"
         android:padding="20dp"
         android:text="Consumption:"
@@ -55,35 +60,35 @@
         android:textStyle="bold" />
 
 
-        <TextView
-            android:id="@+id/costKw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/consumption"
-            android:layout_alignEnd="@+id/consumption"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="6dp"
-            android:background="@drawable/txt_round"
-            android:padding="20dp"
-            android:text="Cost of 1 kw:"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/costKw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/consumption"
+        android:layout_alignEnd="@+id/consumption"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/txt_round"
+        android:padding="20dp"
+        android:text="Cost of 1 kw:"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/issuedDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/costKw"
-            android:layout_alignStart="@+id/costKw"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/txt_round"
-            android:padding="20dp"
-            android:text="Issued date:"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/issuedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/costKw"
+        android:layout_alignStart="@+id/costKw"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/txt_round"
+        android:padding="20dp"
+        android:text="Issued date:"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/total"
@@ -92,7 +97,7 @@
         android:layout_below="@+id/issuedDate"
         android:layout_alignStart="@+id/costKw"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/txt_round"
         android:padding="20dp"
         android:text="Total:"
@@ -107,7 +112,7 @@
         android:layout_below="@+id/total"
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/txt_round"
         android:padding="20dp"
         android:text="Payed date"
@@ -129,20 +134,21 @@
             android:textSize="20sp" />
 
 
-    <TextView
-        android:id="@+id/jsonCost"
-        android:layout_width="153dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/costKw"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="-3dp"
-        android:layout_marginEnd="44dp"
-        android:layout_toEndOf="@+id/costKw"
-        android:padding="20dp"
-        android:text="cost:"
-        android:textColor="@color/blue"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/jsonCost"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jsonConsump"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="18dp"
+            android:layout_toEndOf="@+id/costKw"
+            android:padding="20dp"
+            android:text="cost:"
+            android:textColor="#fff"
+            android:background="@color/flowerBlue"
+            android:textSize="20sp" />
 
     <TextView
         android:id="@+id/jsonIssued"
@@ -151,44 +157,47 @@
 
         android:layout_below="@+id/costKw"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="5dp"
         android:layout_toEndOf="@+id/issuedDate"
         android:padding="20dp"
         android:text="issued:"
-        android:textColor="@color/blue"
+        android:textColor="#fff"
+        android:background="@color/flowerBlue"
         android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/jsonTotal"
-        android:layout_width="148dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/costKw"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="149dp"
-        android:layout_marginEnd="55dp"
-        android:layout_toEndOf="@+id/total"
-        android:padding="20dp"
-        android:text="total:"
-        android:textColor="@color/blue"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/jsonTotal"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jsonIssued"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="21dp"
+            android:layout_toEndOf="@+id/total"
+            android:background="@color/flowerBlue"
+            android:padding="20dp"
+            android:text="total:"
+            android:textColor="#fff"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/jsonStatus"
-        android:layout_width="164dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/costKw"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="222dp"
-        android:layout_marginEnd="37dp"
-        android:layout_toEndOf="@+id/PaymentStatus"
-        android:padding="20dp"
-        android:text="status:"
-        android:textColor="@color/blue"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/jsonStatus"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="6dp"
+            android:layout_toEndOf="@+id/PaymentStatus"
+            android:background="@color/flowerBlue"
+            android:padding="20dp"
+            android:text="status:"
+            android:textColor="#fff"
+            android:textSize="20sp" />
 
     <Button
         android:translationZ="-1000dp"
@@ -203,10 +212,10 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="119dp"
         android:layout_marginBottom="13dp"
-        android:background="#FF0000"
+        android:background="@drawable/btn_round"
         android:text="Checkout"
 
-                android:textColor="#000" />
+                android:textColor="#fff" />
 
     <TextView
         android:id="@+id/jsonid"
@@ -214,13 +223,16 @@
         android:layout_height="wrap_content"
 
         android:layout_below="@+id/SPid"
+        android:layout_alignParentEnd="true"
         android:layout_marginStart="86dp"
         android:layout_marginTop="-67dp"
+        android:layout_marginEnd="96dp"
         android:layout_toEndOf="@+id/SPid"
         android:padding="20dp"
         android:text="id:"
-        android:textColor="@color/blue"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="@color/flowerBlue"/>
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

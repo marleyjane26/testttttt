@@ -47,7 +47,7 @@
        android:textSize="20sp" />
 
 
-    d
+
 
     <TextView
         android:id="@+id/numberjson"
