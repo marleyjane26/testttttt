@@ -26,14 +26,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:textColorHint="#fff">
 
             <EditText android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:inputType="textEmailAddress"
                 android:hint="Email or ID"
-                android:textColorHint="#ffffff"
+
+
                 android:background="@drawable/edit_round"
                 android:gravity="center"/>
         </android.support.design.widget.TextInputLayout>
@@ -43,7 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:textColorHint="#fff">
 
             <EditText android:id="@+id/input_password"
                 android:layout_width="match_parent"
@@ -51,7 +54,7 @@
                 android:inputType="textPassword"
                 android:hint="Password"
                 android:background="@drawable/edit_round"
-                android:textColorHint="#ffffff"
+
                 android:gravity="center"/>
         </android.support.design.widget.TextInputLayout>
 

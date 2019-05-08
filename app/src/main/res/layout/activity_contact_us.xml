@@ -6,81 +6,278 @@
     android:layout_height="match_parent"
     tools:context=".contactUsActivity"
     >
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
 
+        android:background="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="-45dp"
+
+        android:src="@drawable/ic_phone_black_24dp"
+        android:tint="@color/Green" />
 
     <TextView
-        android:id="@+id/emailtext"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/aup"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="54dp"
+        android:text="Phone:"
+        android:textColor="@color/violet"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="123dp"
+        android:text="Email:"
+        android:textColor="@color/violet"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/aup"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="23dp"
-        android:background="@drawable/txt_round"
-        android:padding="30dp"
-        android:text="@string/AUE"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/emailtext"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/txt_round"
-        android:padding="30dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="47dp"
         android:text="@string/AUP"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-
-        android:layout_gravity="center"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="198dp"
-        android:padding="30dp"
-        android:text="LIU/Tyre -Infront ABS Gym"
         android:textColor="@color/flowerBlue"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="93dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="118dp"
+        android:src="@drawable/emailvector"
+        android:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/emailllll"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_gravity="center"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="121dp"
+
+        android:text="@string/AUE"
+        android:textColor="@color/flowerBlue"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="183dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="207dp"
+        android:src="@drawable/facebook" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="213dp"
+        android:text="Facebook:"
+        android:textColor="@color/violet"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
         android:layout_gravity="center"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="213dp"
+
+        android:text="@string/app_name"
+        android:textColor="@color/flowerBlue"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="82dp"
-        android:padding="30dp"
-        android:text="We are available from Monday till Saturday at 8:00 am -2:00 pm ."
+        android:layout_marginTop="266dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="281dp"
+        android:src="@drawable/instagram" />
+
+    <TextView
+        android:id="@+id/insta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="283dp"
+        android:text="Instagram:"
+        android:textColor="@color/violet"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/insta"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="138dp"
+        android:layout_toEndOf="@+id/insta"
+        android:text="@string/app_name"
         android:textColor="@color/flowerBlue"
-        android:textSize="15sp" />
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="344dp"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/v4"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-
-        android:layout_gravity="center"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="36dp"
+        android:hint="@string/time"
         android:padding="5dp"
-        android:text="For more information's visit our web wwww.LBPower.com"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15sp" />
+        android:textColorHint="@color/flowerBlue"
+        android:textStyle="italic"
+        android:id="@+id/hint"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/contact"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/v4"
+        android:layout_alignParentStart="true"
+       android:id="@+id/v5"/>
+
+    <ImageView
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="-54dp"
+
+        android:src="@drawable/homevector"
+        android:tint="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="371dp"
+        android:text="Address:"
+        android:textColor="@color/violet"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/ad"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="371dp"
+        android:text="LIU-Tyre-Main Street"
+        android:textColor="@color/flowerBlue"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+
 
 
 </RelativeLayout>
