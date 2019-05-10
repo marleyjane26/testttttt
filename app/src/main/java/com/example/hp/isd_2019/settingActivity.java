@@ -26,7 +26,7 @@ public class settingActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(view.getContext(),feedBack.class);
-                startActivity(intent);
+              startActivity(intent);
             }
         });
 
@@ -35,8 +35,8 @@ public class settingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(view.getContext(),appVersion.class);
-                startActivity(intent);
+               Intent intent = new Intent(view.getContext(),appVersion.class);
+              startActivity(intent);
             }
         });
 

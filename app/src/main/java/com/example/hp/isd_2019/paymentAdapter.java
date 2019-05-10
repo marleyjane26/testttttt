@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.graphics.Color;
 
 import java.util.ArrayList;
 
@@ -67,15 +68,20 @@ public class paymentAdapter extends BaseAdapter {
         }
 
 
-        holder.id.setText("id : "+dataModelArrayList.get(position).getid());
+        holder.id.setText(dataModelArrayList.get(position).getMonth());
+
        if( dataModelArrayList.get(position).getPayment_state()==true){
 
            holder.st.setText("Payed");
+           holder.st.setTextColor(Color.parseColor("#59f442"));
 
        }
        else{
 
            holder.st.setText("not Payed");
+
+           holder.st.setTextColor(Color.parseColor("#f20909"));
+
 
        }
 

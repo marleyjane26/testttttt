@@ -23,7 +23,7 @@ public void onClick(View arg0) {
         showDialog(CUSTOM_DIALOG_ID);
         }
         });
-
+//TODO:asdsasasas
         }
 private Button.OnClickListener customDialog_DismissOnClickListener  = new Button.OnClickListener(){
 @Override

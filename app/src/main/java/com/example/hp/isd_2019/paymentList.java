@@ -100,10 +100,10 @@ public class paymentList extends AppCompatActivity {
                                     JSONObject dataobj = dataArray.getJSONObject(i);
                                     Log.d("strrrrr", ">>" + dataobj.getString("id"));
                                     x.setid(Integer.parseInt(dataobj.getString("id")));
+                                    x.setIssued_date(dataobj.getString("issued_date"));
                                     x.setPayment_state(Integer.parseInt(dataobj.getString("payment_st")));
                                     if(dataModelArrayList.isEmpty()){
                                         Log.d("befoooooooooore", ">>>>>>>>>>>>>>>>>>0000000000000000" );
-
 
                                     }
                                     else{

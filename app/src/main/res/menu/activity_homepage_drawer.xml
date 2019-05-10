@@ -33,7 +33,7 @@
 
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_clear_black_24dp"
+
                 android:title="Logout"
                 />
 
