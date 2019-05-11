@@ -23,6 +23,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 import android.widget.Toast;
 import static android.Manifest.permission.CALL_PHONE;
@@ -60,6 +64,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         service.scheduleAtFixedRate(runnable, 1000,5000, TimeUnit.SECONDS);
     }
     FloatingActionButton call;
+    WebView graph;
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
    public String number="";
     private static ProgressDialog mProgressDialog;
@@ -76,8 +81,20 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         setContentView(R.layout.activity_homepage);
         kwhText = (TextView) findViewById(R.id.kwh);
         billText= (TextView) findViewById(R.id.bill);
+        graph=(WebView) findViewById(R.id.graph);
+        graph.setWebViewClient(new WebViewClient());
+        WebSettings webSettings=graph.getSettings();
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+        webSettings.setJavaScriptEnabled(true);
+        graph.setWebChromeClient(new WebChromeClient());
+        graph.loadUrl("https://lbpower.000webhostapp.com/public/");
         call=(FloatingActionButton) findViewById(R.id.fab);
-        GraphView graph = (GraphView) findViewById(R.id.graph);
+
+
+
+        /*
+        *
+        *  GraphView graph = (GraphView) findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
@@ -96,6 +113,10 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         series.setBackgroundColor(Color.GREEN);
         series.setDrawDataPoints(true);
         graph.addSeries(series);
+        *
+        *
+        * */
+
         mAuth = FirebaseAuth.getInstance();
 
 
