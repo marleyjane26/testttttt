@@ -9,16 +9,33 @@
     tools:context=".homepage"
     tools:showIn="@layout/app_bar_homepage">
 
+    <ImageView
+        android:id="@+id/redLight"
+        android:layout_width="16dp"
+        android:layout_height="17dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/redlight" />
+
+    <ImageView
+        android:id="@+id/greenLight"
+        android:layout_width="15dp"
+        android:layout_height="16dp"
+        android:layout_alignEnd="@+id/redLight"
+        android:layout_marginEnd="-369dp"
+        android:src="@drawable/greenlight" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="350dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:background="#f3f4ee">
-
 
 
         <WebView
@@ -36,24 +53,24 @@
     </RelativeLayout>
 
 
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="370dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="370dp"
         android:layout_marginRight="20dp"
         android:background="#f3f4ee">
+
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="143dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="50dp"
-            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:alpha="0.8"
             android:gravity="center"
             android:text="KW/H"
             android:textColor="#000000"
-            android:alpha="0.8"/>
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/kwh"
@@ -67,6 +84,7 @@
             android:textColor="#000000"
             android:textSize="40dp" />
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
