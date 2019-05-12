@@ -12,7 +12,8 @@
         <item
             android:id="@+id/nav_payments"
             android:icon="@drawable/ic_attach_money_black_24dp"
-            android:title="Payments" />
+            android:title="Payments"
+            />
         <item
             android:id="@+id/nav_creditC"
             android:icon="@drawable/ic_credit_card_black_24dp"
@@ -33,7 +34,7 @@
 
             <item
                 android:id="@+id/nav_share"
-
+                android:icon="@drawable/ic_clear_black_24dp"
                 android:title="Logout"
                 />
 
