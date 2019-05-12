@@ -163,13 +163,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="460dp"
+        android:background="@color/Gray"
         android:text="Contact the supplier when you face any problem."
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:background="@color/Gray"/>
+        android:textStyle="bold" />
 
 
 
