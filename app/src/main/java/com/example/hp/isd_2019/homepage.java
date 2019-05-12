@@ -1,13 +1,18 @@
 package com.example.hp.isd_2019;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -18,9 +23,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import static android.Manifest.permission.CALL_PHONE;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -54,12 +63,15 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
         service.scheduleAtFixedRate(runnable, 1000,5000, TimeUnit.SECONDS);
     }
-
+    FloatingActionButton call;
+    WebView graph;
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+   public String number="";
     private static ProgressDialog mProgressDialog;
     TextView kwhText;
     TextView billText;
     private FirebaseAuth mAuth;
+    int MY_PERMISSIONS_REQUEST_CALL_PHONE;
     private String URLstring = "https://lbpower.000webhostapp.com/api/getkwh.php?fk_client="+currentuser;
 //TODO:get more to attruibe from the php:number of supplier &(0/1) if client found in the device table
     boolean doubleBackToExitPressedOnce = false;
@@ -69,7 +81,20 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         setContentView(R.layout.activity_homepage);
         kwhText = (TextView) findViewById(R.id.kwh);
         billText= (TextView) findViewById(R.id.bill);
-        GraphView graph = (GraphView) findViewById(R.id.graph);
+        graph=(WebView) findViewById(R.id.graph);
+        graph.setWebViewClient(new WebViewClient());
+        WebSettings webSettings=graph.getSettings();
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+        webSettings.setJavaScriptEnabled(true);
+        graph.setWebChromeClient(new WebChromeClient());
+        graph.loadUrl("https://lbpower.000webhostapp.com/public/");
+        call=(FloatingActionButton) findViewById(R.id.fab);
+
+
+
+        /*
+        *
+        *  GraphView graph = (GraphView) findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
@@ -88,6 +113,10 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         series.setBackgroundColor(Color.GREEN);
         series.setDrawDataPoints(true);
         graph.addSeries(series);
+        *
+        *
+        * */
+
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -98,8 +127,14 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(Intent.ACTION_CALL);
+                i.setData(Uri.parse("tel:"+number));
+
+                if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                    startActivity(i);
+                } else {
+                    requestPermissions(new String[]{CALL_PHONE}, 1);
+                }
             }
         });
 
@@ -226,6 +261,11 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
                                 Log.d("strrrrr", ">>" + dataobj.getString("kw"));
                                 kwhText.setText(dataobj.getString("kw"));
                                 billText.setText(dataobj.getString("bill"));
+                                if(number.isEmpty()){
+
+                                    number=dataobj.getString("phone");
+
+                                }
 
 
                                 removeSimpleProgressDialog();
@@ -293,6 +333,24 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         }
     }
 
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
 
+            if(requestCode== MY_PERMISSIONS_REQUEST_CALL_PHONE) {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+
+            }
+        return;
+            // other 'case' lines to check for other
+            // permissions this app might request.
+
+    }
 
 }
