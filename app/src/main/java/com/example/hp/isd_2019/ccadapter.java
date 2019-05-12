@@ -22,7 +22,11 @@ public class ccadapter extends BaseAdapter {
 
     @Override
     public int getViewTypeCount() {
-        return getCount();
+        if(getCount() > 0){
+            return getCount();
+        }else{
+            return super.getViewTypeCount();
+        }
     }
     @Override
     public int getItemViewType(int position) {

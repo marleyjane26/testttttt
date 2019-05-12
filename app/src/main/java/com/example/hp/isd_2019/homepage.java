@@ -52,20 +52,10 @@ import java.util.concurrent.TimeUnit;
 
 public class homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
-    public  void main(String[] args) {
-        Runnable runnable = new Runnable() {
-            public void run() {
-                retrieveJSON();
-
-            }
-        };
-        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-        service.scheduleAtFixedRate(runnable, 1000,5000, TimeUnit.SECONDS);
-    }
-    FloatingActionButton call;
-    WebView graph;
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
+    FloatingActionButton call;
+    String url="https://lbpower.000webhostapp.com/public/index.php?id="+currentuser;
+    WebView graph;
    public String number="";
     private static ProgressDialog mProgressDialog;
     TextView kwhText;
@@ -87,7 +77,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setJavaScriptEnabled(true);
         graph.setWebChromeClient(new WebChromeClient());
-        graph.loadUrl("https://lbpower.000webhostapp.com/public/");
+        graph.loadUrl(url);
         call=(FloatingActionButton) findViewById(R.id.fab);
 
 
