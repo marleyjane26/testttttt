@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name">
@@ -37,8 +36,8 @@
         <activity android:name=".Pay" />
         <activity android:name=".Forget_Password" />
         <activity android:name=".feedBack" />
-        <activity android:name=".appVersion"></activity>
-
+        <activity android:name=".appVersion" />
+        <activity android:name=".deviceGuide"></activity>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class settingActivity extends AppCompatActivity {
 
-    private Button feedback, appVer, aboutUs;
+    private Button feedback, appVer, aboutUs,deviceG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class settingActivity extends AppCompatActivity {
         feedback = (Button) findViewById(R.id.feedbtn);
         appVer = (Button) findViewById(R.id.appVersion);
         aboutUs = (Button) findViewById(R.id.aboutUs);
+        deviceG = (Button) findViewById(R.id.deviceGuide);
 
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,14 @@ public class settingActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(view.getContext(),aboutUsActivity.class);
+                startActivity(intent);
+            }
+        });
+        deviceG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(view.getContext(),deviceGuide.class);
                 startActivity(intent);
             }
         });

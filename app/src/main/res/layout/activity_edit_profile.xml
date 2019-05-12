@@ -135,6 +135,34 @@
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:id="@+id/phoneNumber"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/txt_round"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Supplier name"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+
+                android:textAlignment="center"
+                android:id="@+id/supplierName"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/txt_round"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Cost of KW"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+
+                android:textAlignment="center"
+                android:id="@+id/costKw"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
