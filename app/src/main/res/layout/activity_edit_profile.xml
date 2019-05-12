@@ -11,8 +11,11 @@
             android:id="@+id/header_cover_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:background="@color/violet" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:background="@color/violet"
+            android:scaleType="centerCrop" />
 
         <ImageButton
             android:id="@+id/user_profile_photo"
