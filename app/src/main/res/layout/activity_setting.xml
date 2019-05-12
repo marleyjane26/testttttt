@@ -1,35 +1,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    >
 
 
     <Button
         android:id="@+id/feedbtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_gravity="center"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:textColor="#fff"
-        android:text="Send feedback"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/btn_round"
-        android:textStyle="bold"
-        android:onClick="feedBack"/>
+        android:onClick="feedBack"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="Send feedback"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
     <Button
-    android:id="@+id/appVersion"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_gravity="center"
-    android:layout_marginTop="73dp"
-    android:background="@drawable/btn_round"
-    android:padding="@dimen/activity_horizontal_margin"
-    android:text="App version"
-    android:textColor="#fff"
-    android:textStyle="bold"
-        android:onClick="appVer"/>
+        android:id="@+id/appVersion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="113dp"
+        android:background="@drawable/btn_round"
+        android:onClick="appVer"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="App version"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/aboutUs"
@@ -39,13 +45,30 @@
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="158dp"
+        android:layout_marginTop="185dp"
         android:background="@drawable/btn_round"
+        android:onClick="aboutUs"
         android:padding="@dimen/activity_horizontal_margin"
         android:text="About Us"
         android:textColor="#fff"
-        android:textStyle="bold"
-        android:onClick="aboutUs"/>
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/deviceGuide"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/btn_round"
+        android:onClick="aboutUs"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="Device Guide"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
 </RelativeLayout>
 

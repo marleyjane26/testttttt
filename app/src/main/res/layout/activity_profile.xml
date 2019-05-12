@@ -17,14 +17,19 @@
             android:layout_marginTop="21dp"
             android:layout_marginEnd="10dp"
             android:clickable="true"
-            android:src="@drawable/edit_vector" />
+            android:src="@drawable/edit_vector"
+            android:background="@color/flowerBlue"/>
 
         <ImageView
             android:id="@+id/header_cover_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:background="@color/flowerBlue" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="19dp"
+            android:background="@color/violet"
+            android:scaleType="centerCrop" />
 
         <ImageButton
             android:id="@+id/user_profile_photo"
@@ -45,8 +50,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/header_cover_image"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="5dp"
-            android:background="@color/violet"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-1dp"
+            android:background="@color/flowerBlue"
             android:elevation="4dp"
             android:paddingBottom="24dp">
 
@@ -144,7 +150,34 @@
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:id="@+id/phoneNumber"/>
-
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/txt_round"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Supplier name"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:id="@+id/supplierName"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/txt_round"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Cost of KW"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:id="@+id/costKw"/>
 
 
         </LinearLayout>

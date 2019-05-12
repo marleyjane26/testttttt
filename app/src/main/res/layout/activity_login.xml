@@ -35,7 +35,7 @@
                 android:inputType="textEmailAddress"
                 android:hint="Email or ID"
 
-
+                android:textColor="@color/colorPrimary"
                 android:background="@drawable/edit_round"
                 android:gravity="center"/>
         </android.support.design.widget.TextInputLayout>
@@ -54,7 +54,7 @@
                 android:inputType="textPassword"
                 android:hint="Password"
                 android:background="@drawable/edit_round"
-
+                android:textColor="@color/colorPrimary"
                 android:gravity="center"/>
         </android.support.design.widget.TextInputLayout>
 
