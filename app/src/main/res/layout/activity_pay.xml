@@ -42,7 +42,8 @@
             android:padding="10dp"
             android:layout_marginLeft="100dp"
             android:text="....."
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            />
 
     </RadioGroup>
 
