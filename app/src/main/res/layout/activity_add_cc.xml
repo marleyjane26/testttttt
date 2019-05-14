@@ -1,10 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:id="@+id/cnum"
         android:layout_width="wrap_content"
@@ -154,16 +156,14 @@
 
     <EditText
         android:id="@+id/cvcE"
-        android:layout_width="wrap_content"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cvv"
         android:layout_alignEnd="@+id/cnum"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="2dp"
         android:hint="3 digit"
         android:maxLength="3"
         android:padding="15dp"
@@ -183,6 +183,6 @@
         android:background="@drawable/btn_round"
         android:text="Save"
         android:textColor="#fff" />
-
-
 </RelativeLayout>
+
+</ScrollView>
