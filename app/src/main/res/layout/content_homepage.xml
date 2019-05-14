@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,9 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".homepage"
     tools:showIn="@layout/app_bar_homepage">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/redLight"
@@ -48,75 +51,84 @@
         </WebView>
 
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginRight="20dp"
-        android:background="#f3f4ee">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="350dp"
+            android:background="#f3f4ee">
 
-        <TextView
-            android:layout_width="143dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="15dp"
-            android:alpha="0.8"
-            android:gravity="center"
-            android:text="KW/H"
-            android:textColor="#000000"
-            android:textSize="16dp" />
+            <TextView
+                android:layout_width="143dp"
+                android:layout_height="45dp"
 
-        <TextView
-            android:id="@+id/kwh"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="10dp"
-            android:alpha="0.8"
-            android:gravity="center"
-            android:text=" "
-            android:textColor="#000000"
-            android:textSize="40dp" />
+
+                android:alpha="0.8"
+                android:gravity="center"
+                android:text="KW/H"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/kwh"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="0dp"
+                android:alpha="0.8"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="#000000"
+                android:textSize="40dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="388dp"
+            android:background="#f3f4ee">
+
+            <TextView
+                android:id="@+id/costBill"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:alpha="0.8"
+                android:gravity="center"
+                android:text="Cost Bill"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/bill"
+                android:layout_width="144dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="41dp"
+                android:layout_toEndOf="@+id/costBill"
+                android:alpha="0.8"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="40sp" />
+
+
+        </RelativeLayout>
     </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="750dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginRight="20dp"
-        android:background="#f3f4ee">
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="15dp"
-            android:alpha="0.8"
-            android:gravity="center"
-            android:text="Cost Bill"
-            android:textColor="#000000"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/bill"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="0dp"
-            android:alpha="0.8"
-            android:gravity="center"
-            android:text=""
-            android:textColor="#000000"
-            android:textSize="40sp" />
-
-
-    </RelativeLayout>
-</RelativeLayout>
+</ScrollView>
 
 
 
