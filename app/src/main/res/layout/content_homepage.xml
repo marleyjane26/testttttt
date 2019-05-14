@@ -35,17 +35,15 @@
         android:translationZ="1000dp" />
 
 
-
-
         <WebView
             android:id="@+id/graph"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="350dp"
+            android:layout_height="12dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="431dp"
             android:layout_marginBottom="0dp">
 
         </WebView>
@@ -69,31 +67,36 @@
                 android:alpha="0.8"
                 android:gravity="center"
                 android:text="KW/H"
-                android:textColor="#000000"
-                android:textSize="16dp" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/kwh"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="0dp"
+                android:layout_marginEnd="37dp"
                 android:alpha="0.8"
                 android:gravity="center"
                 android:text=" "
-                android:textColor="#000000"
-                android:textSize="40dp" />
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                />
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="349dp"
+            android:layout_height="53dp"
 
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="388dp"
+            android:layout_marginTop="389dp"
             android:background="#f3f4ee">
 
             <TextView
@@ -107,8 +110,9 @@
                 android:alpha="0.8"
                 android:gravity="center"
                 android:text="Cost Bill"
-                android:textColor="#000000"
-                android:textSize="16dp" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/bill"
@@ -122,8 +126,9 @@
                 android:alpha="0.8"
                 android:gravity="center"
                 android:text=""
-                android:textColor="#000000"
-                android:textSize="40sp" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
 
 
         </RelativeLayout>
