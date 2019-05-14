@@ -156,7 +156,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="425dp"
             android:background="@drawable/txt_round"
-            android:padding="10dp"
+            android:padding="15dp"
             android:text="Payed date"
             android:textColor="#ffffff"
             android:textSize="20sp"
