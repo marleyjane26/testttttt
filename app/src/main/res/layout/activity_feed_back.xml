@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="75sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name"
             android:textSize="20sp"
@@ -26,7 +26,7 @@
             android:id="@+id/editText1"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_marginLeft="16dp">
 
         </EditText>
@@ -56,7 +56,7 @@
             android:id="@+id/editText2"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_marginLeft="16dp"
             >
 
@@ -84,21 +84,24 @@
         <EditText
             android:id="@+id/editText3"
             android:layout_height="wrap_content"
-            android:layout_width="200dp">
+            android:layout_width="match_parent">
 
         </EditText>
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/linearLayout4">
 
         <Button
             android:id="@+id/send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="54dp"
             android:layout_marginLeft="70dp"
             android:background="@drawable/btn_round"
             android:text="Send"
@@ -111,10 +114,15 @@
             android:id="@+id/cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="116dp"
+            android:layout_toEndOf="@+id/send"
             android:background="@drawable/btn_round"
             android:text="Cancel"
             android:textColor="#fff">
 
         </Button>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
