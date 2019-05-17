@@ -30,7 +30,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class SinglePayment extends AppCompatActivity {
-    TextView id,cons,total,costof1,issued,payed,payedtext;
+    TextView id,cons,total,costof1,issued,payed,payedtext,due;
     Button btn;
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -58,6 +58,7 @@ public class SinglePayment extends AppCompatActivity {
         total=(TextView)findViewById(R.id.jsonTotal);
         issued=(TextView)findViewById(R.id.jsonIssued);
         payed=(TextView)findViewById(R.id.jsonStatus);
+        due=(TextView)findViewById(R.id.jsonDue);
         payedtext=(TextView)findViewById(R.id.PaymentStatus);
         btn=(Button) findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +112,7 @@ public class SinglePayment extends AppCompatActivity {
                                 totals=dataobj.getString("Total");
                                 x.setPayment_state(Integer.parseInt(dataobj.getString("payment_st")));
                                 issued.setText(dataobj.getString("issued_date"));
+                                due.setText(dataobj.getString("due_date"));
                                 if(x.getPayment_state()){
                                     payed.setText(dataobj.getString("payment_date"));
                                     btn.setVisibility(View.GONE);

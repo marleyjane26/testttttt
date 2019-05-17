@@ -1,260 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SinglePayment">
-    <RelativeLayout
+    tools:context=".MainActivity"
+    android:stretchColumns="1"
+    android:background="@color/Gray">
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TableRow>
+            <TextView
 
-<View
-    android:layout_width="fill_parent"
-    android:layout_height="1dp"
-    android:background="@color/violet"/>
-    <TextView
-        android:id="@+id/jsonConsump"
-        android:layout_width="wrap_content"
-        android:layout_height="85dp"
-        android:layout_alignTop="@+id/consumption"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="-4dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toEndOf="@+id/consumption"
-        android:padding="20dp"
-        android:text="con"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp"
-        android:textAlignment="center"/>
+                android:text="ID"
+                android:padding="10dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:id="@+id/SPid"
+                />
+            <TextView
+                android:text="Id"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:id="@+id/jsonid"/>
+        </TableRow>
+        <TableRow>
+            <TextView
 
-        <TextView
-            android:id="@+id/SPid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="7dp"
-            android:background="@drawable/txt_round"
-            android:padding="20dp"
-            android:text="ID:"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+                android:text="Consumption"
+                android:padding="10dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:id="@+id/consumption"/>
+            <TextView
+                android:text="consumption"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:id="@+id/jsonConsump"/>
+        </TableRow>
+        <TableRow>
+            <TextView
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/jsonid"
-        android:layout_alignParentStart="true"
-        android:background="@color/violet" />
+                android:text="Cost of 1 Kw"
+                android:padding="10dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:id="@+id/costKw"/>
+            <TextView
+                android:text="costOf1Kw"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:id="@+id/jsonCost"/>
+        </TableRow>
+        <TableRow>
+            <TextView
 
+                android:text="Total"
+                android:padding="10dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:id="@+id/total"/>
+            <TextView
+                android:text="total"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:id="@+id/jsonTotal"/>
+        </TableRow>
+        <TableRow>
+            <TextView
 
-        <TextView
-            android:id="@+id/consumption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="88dp"
-            android:background="@drawable/txt_round"
-            android:padding="20dp"
-            android:text="Consumption:"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+                android:text="Issued Date"
+                android:padding="10dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:id="@+id/issuedDate"/>
+            <TextView
+                android:text="issued"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:id="@+id/jsonIssued"/>
+        </TableRow>
+        <TableRow>
+            <TextView
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_above="@+id/costKw"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="-13dp"
-        android:background="@color/violet" />
+                android:text="Due Date"
+                android:padding="10dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:gravity="left"/>
+            <TextView
+                android:text="Due"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:id="@+id/jsonDue"/>
+        </TableRow>
+        <TableRow>
+            <TextView
 
-
-    <TextView
-        android:id="@+id/costKw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/consumption"
-        android:layout_alignEnd="@+id/consumption"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="7dp"
-        android:background="@drawable/txt_round"
-        android:padding="20dp"
-        android:text="Cost of 1 kw:"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/costKw"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="4dp"
-        android:background="@color/violet" />
-
-    <TextView
-        android:id="@+id/issuedDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/costKw"
-        android:layout_alignStart="@+id/costKw"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/txt_round"
-        android:padding="20dp"
-        android:text="Issued date:"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_above="@+id/jsonTotal"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="-14dp"
-        android:background="@color/violet" />
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/issuedDate"
-        android:layout_alignStart="@+id/costKw"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/txt_round"
-        android:padding="20dp"
-        android:text="Total:"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_above="@+id/jsonStatus"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="-8dp"
-        android:background="@color/violet" />
-
-        <TextView
-            android:id="@+id/PaymentStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="425dp"
-            android:background="@drawable/txt_round"
-            android:padding="15dp"
-            android:text="Payed date"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jsonId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/consumption"
-            android:layout_alignStart="@+id/SPid"
-            android:layout_marginStart="65dp"
-            android:layout_marginBottom="24dp"
-            android:padding="20dp"
-            android:text="id:"
-            android:textColor="@color/blue"
-            android:textSize="20sp" />
-
-
-    <TextView
-        android:id="@+id/jsonCost"
-        android:layout_width="90dp"
-        android:layout_height="66dp"
-        android:layout_alignTop="@+id/costKw"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="0dp"
-        android:textAlignment="center"
-        android:layout_toEndOf="@+id/costKw"
-        android:padding="20dp"
-        android:text="cost"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/jsonIssued"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="252dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toEndOf="@+id/issuedDate"
-        android:padding="20dp"
-
-        android:text="issued"
-        android:textAlignment="center"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/jsonTotal"
-            android:layout_width="91dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/jsonIssued"
-            android:layout_alignEnd="@+id/jsonCost"
-            android:layout_marginStart="173dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="0dp"
-            android:textAlignment="center"
-            android:layout_toEndOf="@+id/total"
-            android:padding="20dp"
-            android:text="total"
-            android:textColor="@color/flowerBlue"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/jsonStatus"
-            android:layout_width="137dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/total"
-            android:layout_alignEnd="@+id/jsonIssued"
-            android:layout_marginStart="113dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="1dp"
-            android:layout_toEndOf="@+id/PaymentStatus"
-            android:padding="20dp"
-            android:text="status"
-            android:textAlignment="center"
-            android:textColor="@color/flowerBlue"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/jsonid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_below="@+id/SPid"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-65dp"
-            android:layout_marginEnd="15dp"
-
-            android:padding="20dp"
-            android:text="id:"
-            android:textColor="@color/flowerBlue"
-            android:textSize="20sp" />
+                android:text="Payed Date"
+                android:padding="10dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:id="@+id/PaymentStatus"/>
+            <TextView
+                android:text="status"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:id="@+id/jsonStatus"/>
+        </TableRow>
+    </TableLayout>
 
     <Button
         android:id="@+id/btn"
@@ -262,12 +165,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="147dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/btn_round"
+        android:layout_marginStart="143dp"
+        android:layout_marginBottom="99dp"
+        android:background="@color/colorPrimaryDark"
         android:text="Checkout"
         android:textColor="#fff"
         android:translationZ="-1000dp" />
-    </RelativeLayout>
-    </ScrollView>
-
+</RelativeLayout>

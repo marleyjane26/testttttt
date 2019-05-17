@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         tempText = (TextView) findViewById(R.id.temp);
         humdityText= (TextView) findViewById(R.id.humd);
+        ActionBar actionBar=getSupportActionBar();
 
         lastQueryHumd.addValueEventListener(new ValueEventListener() {
             @Override

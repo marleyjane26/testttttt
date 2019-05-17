@@ -24,20 +24,34 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".login" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".paymentList" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".settingActivity" />
-        <activity android:name=".creditcardActivity" />
-        <activity android:name=".contactUsActivity" />
-        <activity android:name=".editProfileActivity" />
-        <activity android:name=".aboutUsActivity" />
-        <activity android:name=".addCCActivity" />
-        <activity android:name=".SinglePayment" />
-        <activity android:name=".Pay" />
+        <activity android:name=".paymentList"
+            android:parentActivityName=".homepage"/>
+        <activity android:name=".ProfileActivity"
+            android:parentActivityName=".homepage"/>
+        <activity android:name=".settingActivity"
+            android:parentActivityName=".homepage"/>
+        <activity android:name=".creditcardActivity"
+            android:parentActivityName=".homepage"/>
+        <activity android:name=".contactUsActivity"
+            android:parentActivityName=".homepage"/>
+        <activity android:name=".editProfileActivity"
+            android:parentActivityName=".ProfileActivity"/>
+        <activity android:name=".aboutUsActivity"
+            android:parentActivityName=".settingActivity"/>
+        <activity android:name=".addCCActivity"
+            android:parentActivityName=".addCCActivity"/>
+        <activity android:name=".SinglePayment"
+            android:parentActivityName=".paymentList"/>
+        <activity android:name=".Pay"
+            android:parentActivityName=".SinglePayment"/>
         <activity android:name=".Forget_Password" />
         <activity android:name=".feedBack" />
-        <activity android:name=".appVersion" />
-        <activity android:name=".deviceGuide"></activity>
+        <activity android:name=".appVersion"
+            android:parentActivityName=".settingActivity"/>
+        <activity android:name=".deviceGuide"
+            android:parentActivityName=".settingActivity"/>
+        <activity android:name=".Language"
+            android:parentActivityName=".settingActivity"></activity>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class settingActivity extends AppCompatActivity {
 
-    private Button feedback, appVer, aboutUs,deviceG;
+    private Button language, appVer, aboutUs,deviceG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,16 +17,16 @@ public class settingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setting);
 
 
-        feedback = (Button) findViewById(R.id.feedbtn);
+        language = (Button) findViewById(R.id.lanGbtn);
         appVer = (Button) findViewById(R.id.appVersion);
         aboutUs = (Button) findViewById(R.id.aboutUs);
         deviceG = (Button) findViewById(R.id.deviceGuide);
 
-        feedback.setOnClickListener(new View.OnClickListener() {
+        language.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(view.getContext(),feedBack.class);
+                Intent intent = new Intent(view.getContext(),Language.class);
               startActivity(intent);
             }
         });
