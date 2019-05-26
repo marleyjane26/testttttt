@@ -24,7 +24,7 @@
                 />
             <TextView
                 android:text="Id"
-                android:gravity="right"
+                android:gravity="left"
                 android:padding="3dip"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -45,7 +45,7 @@
                 android:id="@+id/consumption"/>
             <TextView
                 android:text="consumption"
-                android:gravity="right"
+                android:gravity="left"
                 android:padding="3dip"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -66,7 +66,7 @@
                 android:id="@+id/costKw"/>
             <TextView
                 android:text="costOf1Kw"
-                android:gravity="right"
+                android:gravity="left"
                 android:padding="3dip"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -87,7 +87,7 @@
                 android:id="@+id/total"/>
             <TextView
                 android:text="total"
-                android:gravity="right"
+                android:gravity="left"
                 android:padding="3dip"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -108,7 +108,7 @@
                 android:id="@+id/issuedDate"/>
             <TextView
                 android:text="issued"
-                android:gravity="right"
+                android:gravity="left"
                 android:padding="3dip"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -128,7 +128,7 @@
                 android:gravity="left"/>
             <TextView
                 android:text="Due"
-                android:gravity="right"
+                android:gravity="left"
                 android:padding="3dip"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -149,7 +149,7 @@
                 android:id="@+id/PaymentStatus"/>
             <TextView
                 android:text="status"
-                android:gravity="right"
+                android:gravity="left"
                 android:padding="3dip"
                 android:textAlignment="center"
                 android:textStyle="bold"
