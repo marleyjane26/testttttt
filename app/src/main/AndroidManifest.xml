@@ -45,7 +45,6 @@
         <activity android:name=".Pay"
             android:parentActivityName=".SinglePayment"/>
         <activity android:name=".Forget_Password" />
-        <activity android:name=".feedBack" />
         <activity android:name=".appVersion"
             android:parentActivityName=".settingActivity"/>
         <activity android:name=".deviceGuide"

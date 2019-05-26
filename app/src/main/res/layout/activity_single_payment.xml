@@ -30,7 +30,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:id="@+id/jsonid"/>
+                android:id="@+id/jsonid"
+                android:background="@color/colorPrimary"/>
         </TableRow>
         <TableRow>
             <TextView
@@ -51,7 +52,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:id="@+id/jsonConsump"/>
+                android:id="@+id/jsonConsump"
+                android:background="@color/colorPrimary"/>
         </TableRow>
         <TableRow>
             <TextView
@@ -72,7 +74,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:id="@+id/jsonCost"/>
+                android:id="@+id/jsonCost"
+                android:background="@color/colorPrimary"/>
         </TableRow>
         <TableRow>
             <TextView
@@ -93,7 +96,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:id="@+id/jsonTotal"/>
+                android:id="@+id/jsonTotal"
+                android:background="@color/colorPrimary"/>
         </TableRow>
         <TableRow>
             <TextView
@@ -105,7 +109,8 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
                 android:gravity="left"
-                android:id="@+id/issuedDate"/>
+                android:id="@+id/issuedDate"
+                />
             <TextView
                 android:text="issued"
                 android:gravity="left"
@@ -114,7 +119,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:id="@+id/jsonIssued"/>
+                android:id="@+id/jsonIssued"
+                android:background="@color/colorPrimary"/>
         </TableRow>
         <TableRow>
             <TextView
@@ -134,7 +140,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:id="@+id/jsonDue"/>
+                android:id="@+id/jsonDue"
+                android:background="@color/colorPrimary"/>
         </TableRow>
         <TableRow>
             <TextView
@@ -155,7 +162,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
-                android:id="@+id/jsonStatus"/>
+                android:id="@+id/jsonStatus"
+                android:background="@color/colorPrimary"/>
         </TableRow>
     </TableLayout>
 
