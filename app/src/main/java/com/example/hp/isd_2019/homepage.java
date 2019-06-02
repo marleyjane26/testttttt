@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -27,6 +28,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import static android.Manifest.permission.CALL_PHONE;
@@ -37,6 +39,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
@@ -60,17 +68,33 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
     private static ProgressDialog mProgressDialog;
     TextView kwhText;
     TextView billText;
+    ImageView red;
+    ImageView green;
     private FirebaseAuth mAuth;
     int MY_PERMISSIONS_REQUEST_CALL_PHONE;
     private String URLstring = "https://lbpower.000webhostapp.com/api/getkwh.php?fk_client="+currentuser;
 //TODO:get more to attruibe from the php:number of supplier &(0/1) if client found in the device table
     boolean doubleBackToExitPressedOnce = false;
+
+    //DatabaseReference dref = FirebaseDatabase.getInstance().getReference(currentuser);
+
+  //  Query lastQueryTemp = dref.orderByKey().limitToLast(1);
+
+
+
+
+
+
+    ///////////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         kwhText = (TextView) findViewById(R.id.kwh);
         billText= (TextView) findViewById(R.id.bill);
+        red=(ImageView) findViewById(R.id.redLight);
+        green=(ImageView) findViewById(R.id.greenLight);
+green.setVisibility(View.GONE);
         graph=(WebView) findViewById(R.id.graph);
         graph.setWebViewClient(new WebViewClient());
         WebSettings webSettings=graph.getSettings();
@@ -108,13 +132,35 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         * */
 
         mAuth = FirebaseAuth.getInstance();
+        ///for led
+//        lastQueryTemp.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//             red.setVisibility(View.GONE);
+//               green.setVisibility(View.VISIBLE);
+////                try {
+////                    TimeUnit.MINUTES.sleep(1);
+////                } catch (InterruptedException e) {
+////                    e.printStackTrace();
+////                }
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Log.w( "loadPost:onCancelled", databaseError.toException());
+//            }
+//        });
 
 
-       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
       setSupportActionBar(toolbar);
         retrieveJSON();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+
+        call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_CALL);

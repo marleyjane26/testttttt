@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +8,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".homepage"
     tools:showIn="@layout/app_bar_homepage">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
     <ImageView
         android:id="@+id/redLight"
@@ -33,104 +31,87 @@
         android:layout_marginEnd="-27dp"
         android:src="@drawable/greenlight"
         android:translationZ="1000dp" />
+    <WebView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/greenLight"
+        >
 
-
-        <WebView
-            android:id="@+id/graph"
+    </WebView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/maine"
+        android:orientation="vertical"
+        android:layout_below="@id/greenLight">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="51dp">
-
-        </WebView>
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="350dp"
-            android:background="#f3f4ee">
-
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#fff">
             <TextView
-                android:layout_width="143dp"
+                android:layout_width="0dp"
                 android:layout_height="45dp"
-
-
-                android:alpha="0.8"
-                android:gravity="center"
                 android:text="KW/H"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"/>
 
             <TextView
                 android:id="@+id/kwh"
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="37dp"
-                android:alpha="0.8"
                 android:gravity="center"
                 android:text=" "
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
+                android:layout_weight="1"
                 />
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="389dp"
-            android:background="#f3f4ee">
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/down"
+            android:background="#fff"
+            >
 
             <TextView
                 android:id="@+id/costBill"
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="15dp"
-                android:alpha="0.8"
-                android:gravity="center"
+                android:paddingLeft="10dp"
                 android:text="Cost Bill"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/bill"
-                android:layout_width="144dp"
+                android:layout_width="0dp"
                 android:layout_height="45dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="49dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="41dp"
-                android:layout_toEndOf="@+id/costBill"
-                android:alpha="0.8"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text=""
-                android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp" />
-
-
-        </RelativeLayout>
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+        </LinearLayout>
     </RelativeLayout>
-</ScrollView>
+
+
+
+
+
+</RelativeLayout>
 
 
 

@@ -111,8 +111,10 @@ public class SinglePayment extends AppCompatActivity {
                                 total.setText(dataobj.getString("Total"));
                                 totals=dataobj.getString("Total");
                                 x.setPayment_state(Integer.parseInt(dataobj.getString("payment_st")));
+                                x.setIssued_date(dataobj.getString("issued_date"));
                                 issued.setText(dataobj.getString("issued_date"));
-                                due.setText(dataobj.getString("due_date"));
+//TODO: EFADFSDF
+                                due.setText(x.getdue());
                                 if(x.getPayment_state()){
                                     payed.setText(dataobj.getString("payment_date"));
                                     btn.setVisibility(View.GONE);

@@ -3,6 +3,7 @@ package com.example.hp.isd_2019;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class creditcardActivity extends AppCompatActivity {
 
@@ -35,15 +38,15 @@ public class creditcardActivity extends AppCompatActivity {
     TextView name,number,month,year,cvc;
     SwipeRefreshLayout pullToRefresh;
     TextView empty;
-
-
+String paymentID;
+    String HttpUrl = "https://lbpower.000webhostapp.com/api/postcc.php";
     private static ProgressDialog mProgressDialog;
     private ListView listView;
     ArrayList<creditcard> dataModelArrayList=new ArrayList<creditcard>();
     private ListAdapter listAdapter;
-
-
-
+    ProgressDialog progressDialog;
+    RequestQueue requestQueue;
+    FloatingActionButton delete;
     FloatingActionButton add;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +76,11 @@ public class creditcardActivity extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+        requestQueue = Volley.newRequestQueue(creditcardActivity.this);
+
+        progressDialog = new ProgressDialog(creditcardActivity.this);
+
+
 
     }
     private void retrieveJSON() {
@@ -97,6 +105,7 @@ public class creditcardActivity extends AppCompatActivity {
                                 creditcard x = new creditcard();
                                 JSONObject dataobj = dataArray.getJSONObject(i);
                                 Log.d("strrrrr", ">>" + dataobj.getString("id_cc"));
+                                paymentID=dataobj.getString("id_cc");
                                 x.setCc_number(dataobj.getString("cc_number"));
                                 x.setName_holder(dataobj.getString("name_holder"));
                                 x.setCvc(dataobj.getString("cvc"));

@@ -8,6 +8,8 @@ public class PaymentModel {
     private int payment_state;
     private String issued_date;
     private String payed_date;
+    private  String due_date;
+
 
     public PaymentModel() {
 
@@ -37,7 +39,17 @@ public class PaymentModel {
         else return  false;
     }
 
+public String getdue(){
+    String [] partsts= this.issued_date.split("-");
+    int day=Integer.parseInt(partsts[2]);
+    int due=day+3;
+    String finals=partsts[0]+"-"+partsts[1]+"-"+due;
 
+    return finals;
+
+
+
+}
 
 
     public String getMonth() {
