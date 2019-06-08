@@ -53,20 +53,20 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/aup"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="center"
+        <TextView
+            android:id="@+id/aup"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
 
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="47dp"
-        android:text="@string/AUP"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp"
-        android:textStyle="italic"/>
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="49dp"
+            android:text="@string/AUP"
+            android:textColor="@color/flowerBlue"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
     <View
         android:layout_width="fill_parent"
@@ -86,21 +86,21 @@
         android:src="@drawable/emailvector"
         android:tint="@color/blue" />
 
-    <TextView
-        android:id="@+id/emailllll"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        <TextView
+            android:id="@+id/emailllll"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
 
-        android:layout_gravity="center"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="121dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="122dp"
 
-        android:text="@string/AUE"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp"
-        android:textStyle="italic"/>
+            android:text="@string/AUE"
+            android:textColor="@color/flowerBlue"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
     <View
         android:layout_width="fill_parent"
@@ -133,21 +133,21 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/fb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        <TextView
+            android:id="@+id/fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
 
-        android:layout_gravity="center"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="213dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="166dp"
+            android:layout_marginTop="215dp"
 
-        android:text="@string/app_name"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp"
-        android:textStyle="italic" />
+            android:text="@string/app_name"
+            android:textColor="@color/flowerBlue"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
     <View
         android:layout_width="fill_parent"
@@ -182,20 +182,21 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:layout_alignTop="@+id/insta"
+            android:layout_alignTop="@+id/insta"
 
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="138dp"
-        android:layout_toEndOf="@+id/insta"
-        android:text="@string/app_name"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp"
-        android:textStyle="italic" />
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="132dp"
+            android:layout_toEndOf="@+id/insta"
+            android:text="@string/app_name"
+            android:textColor="@color/flowerBlue"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
     <View
         android:layout_width="fill_parent"
@@ -270,18 +271,17 @@
         android:id="@+id/ad"/>
 
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="371dp"
-        android:text="LIU-Tyre-Main Street"
-        android:textColor="@color/flowerBlue"
-        android:textSize="20sp"
-        android:textStyle="italic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="149dp"
+            android:layout_marginTop="371dp"
+            android:text="LIU-Tyre-Main Street"
+            android:textColor="@color/flowerBlue"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
     </RelativeLayout>
 
